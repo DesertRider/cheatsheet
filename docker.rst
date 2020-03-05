@@ -62,6 +62,7 @@ see: https://github.com/chadoe/docker-cleanup-volumes
 delete networks
 ---------------
 
+::
     $ docker network ls
     $ docker network ls | grep "bridge"
     $ docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
@@ -77,6 +78,7 @@ Resize disk space for docker vm
 
 Construction d'un container
 ---------------------------
+
 ::
    cd /opt/docker/clamd
    docker build -t clamd .
@@ -84,18 +86,22 @@ Construction d'un container
 S'attacher au container et rouler bash
 --------------------------------------
 
-.. code-block::
+::
 
    docker exec -it container /bin/bash
 
 Logs d'un container Docker
 --------------------------
 
+::
+
    docker logs -f container
 
 
 Pousser l'image docker sur un autre serveur
 -------------------------------------------
+
+::
 
    docker save clamd|ssh qxadweb20.fea.shq.local "docker load"
 
