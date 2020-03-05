@@ -15,12 +15,12 @@ Common commands
 
 Build an image from Dockerfile in current directory::
 
-    docker build -t imagetag .
+   docker build -t imagetag .
 
 Start a container from an image, run a command, and when the
 command exits, stop the container without saving any changes::
 
-    docker run --rm -it imagetag bash
+   docker run --rm -it imagetag bash
 
 Cleanup
 .......
@@ -30,11 +30,12 @@ remove docker containers
 
 see: http://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images
 
-::
+.. codeblock:
+   :linenos:
 
-    $ docker ps
-    $ docker ps -a
-    $ docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+   $ docker ps
+   $ docker ps -a
+   $ docker rm $(docker ps -qa --no-trunc --filter "status=exited")
 
 remove docker images
 --------------------
