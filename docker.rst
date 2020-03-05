@@ -124,7 +124,7 @@ Clean up du network::
 On enlève les networks qui ont un nom *_default::
 
    docker network rm accesdistant_default partenaires_default shq_default
-   docker prune
+   docker network prune
 
 Redémarrer les docker::
 
