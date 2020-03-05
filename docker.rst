@@ -63,6 +63,7 @@ delete networks
 ---------------
 
 ::
+
     $ docker network ls
     $ docker network ls | grep "bridge"
     $ docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
@@ -80,6 +81,7 @@ Construction d'un container
 ---------------------------
 
 ::
+
    cd /opt/docker/clamd
    docker build -t clamd .
 
