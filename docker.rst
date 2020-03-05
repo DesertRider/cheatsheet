@@ -76,31 +76,31 @@ Resize disk space for docker vm
 
 
 Construction d'un container
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 ::
    cd /opt/docker/clamd
    docker build -t clamd .
 
 S'attacher au container et rouler bash
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 .. code-block::
 
    docker exec -it container /bin/bash
 
 Logs d'un container Docker
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
    docker logs -f container
 
 
 Pousser l'image docker sur un autre serveur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
    docker save clamd|ssh qxadweb20.fea.shq.local "docker load"
 
 Reset du network de Docker
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 Si plus capable de se connecter via SSH à partir de nos postes mais qu'on peut à partir d'un serveur
 
 Arrêter les docker qui roulent::
