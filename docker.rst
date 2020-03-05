@@ -30,7 +30,7 @@ remove docker containers
 
 see: http://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images
 
-.. codeblock:
+.. codeblock: bash
    :linenos:
 
    $ docker ps
