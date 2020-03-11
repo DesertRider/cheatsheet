@@ -86,7 +86,7 @@ Resize du file system EXT3 du volume linux::
    xfs_growfs /var
 
 
-AJOUT d'un disque et d'une partition LVM
+Ajout d'un disque et d'une partition LVM
 ----------------------------------------
 
 Ajouter disque physique ou virtuel, puis rescan du disque::
