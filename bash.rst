@@ -2,7 +2,7 @@ Bash
 ====
 
 
-Bash for loop examples
+Bash FOR loop examples
 ----------------------
 
 ::
@@ -106,6 +106,7 @@ Redirections:
 * ``ps >output.txt 2>&1`` redirection de stderr au même fichier que stdout
 * ``ps |tee both.txt`` redirection de stdout à l'écran et dans fichier
 * ``(pwd; ls) >content.txt`` redirection de plusieurs commandes
+* ``echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab`` redirection lorsque pas root
 
 
 Ligne de commande:
