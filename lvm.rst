@@ -128,8 +128,7 @@ Créer le file system XFS du volume linux::
 Autres commandes LVM
 ....................
 
-pvscan
-lvscan
-pvdisplay
-lvdisplay
+o pvscan - scan all disks for physical volumes
+o lvscan - scan all disks for logical volumes
+
 
