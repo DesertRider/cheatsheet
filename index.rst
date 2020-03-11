@@ -4,7 +4,7 @@ Mes Cheat Sheets
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    docker
    lvm
