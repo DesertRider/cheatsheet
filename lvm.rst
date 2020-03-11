@@ -3,9 +3,8 @@ LVM
 
 Création d'un disque en LVM
 
-# Création d'une partition unique de type 8e
+#. Créer une partition unique de type 8e::
 
-``
    Fdisk /dev/sdc <<FIN
    n
    p
@@ -16,42 +15,41 @@ Création d'un disque en LVM
    8e
    w
    FIN
-   ``
 
-# Création d'un volume physique LVM utilisant la partition créée
+#. Créer un volume physique LVM utilisant la partition créée::
 
-``pvcreate /dev/sdc1``
+pvcreate /dev/sdc1
 
-# création d'un volume group LVM
+#. Création d'un volume group LVM::
 
-``vgcreate volgrp_03 /dev/sdc1``
+vgcreate volgrp_03 /dev/sdc1
 
-# affichage du volume physique LVM et du volume group créés
+#. Affichage du volume physique LVM et du volume group créés::
 
-``pvdisplay``
+pvdisplay
 
-# Créer volume LVM "lv_data" sur le volume group créé, utiliser 100% de son espace
+# Créer volume LVM "lv_data" sur le volume group créé, utiliser 100% de son espace::
 
-``lvcreate --name lv_data -l 100%FREE volgrp_03``
+lvcreate --name lv_data -l 100%FREE volgrp_03
 
-# Créer le filesystem sur ce volume
+#. Créer le filesystem sur ce volume::
 
-``mkfs.ext4 /dev/volgrp_03/lv_data``
+mkfs.ext4 /dev/volgrp_03/lv_data
 
-# Créer le mount point, ajuster fstab et monter
+#. Créer le mount point, ajuster fstab et monter::
 
-``
    mkdir /DATA
    vim /etc/fstab
-   # ajouter cette ligne
+   cat >> /etc/fstab <<EOD
    /dev/mapper/volgrp_03-lv_data /DATACMS                  ext4     defaults        0 0
-``
+   EOD
+   
+#. MONTER LE VOLUME::
 
-# MONTER LE VOLUME
+mount -a
 
-``mount -a``
-
-# --- EXTENSION d'une partition LVM existante ---
+Extension d'une partition LVM existante
+---------------------------------------
 
 # 1) ajouter expace disque par VMware
 # rescan du disque...
