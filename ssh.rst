@@ -86,9 +86,18 @@ socat sert principalement à relayer deux flux de données de manière bidirecti
 voir http://www.dest-unreach.org/socat/doc/socat.html#EXAMPLES
 
 
+Voir les clés publiques ssh d'un serveur
+----------------------------------------
+
+::
+
+   ssh-keyscan qxacmsw20.pra.shq.local
+
 Afficher le ssh server key fingerprint
 --------------------------------------
 
-file=$(mktemp)
-ssh-keyscan serveur > $file 2> /dev/null
-ssh-keygen -l -f $file
+::
+
+   file=$(mktemp)
+   ssh-keyscan serveur > $file 2> /dev/null
+   ssh-keygen -l -f $file
