@@ -1,6 +1,26 @@
 Bash
 ====
 
+Alias, fonctions et variables d'environnement utiles::
+----------------------------------------------------
+
+   alias dir='ls -lah'
+   alias ..='cd .."
+   alias .."cd ../..'
+   alias motd='cat /etc/motd'
+   function xdiff() { file=$(readlink -e $1) ; ssh $2 "cat $file" | diff -y -W $COLUMNS "$file" - ; }
+   export GREP_OPTIONS=--color
+   export HISTSIZE=
+   export EDITOR=vim
+   export PROMPT_COMMAND='history -a'
+
+Alias si pas root pour certaines commandes::
+
+   # dans ~/.bashrc par exemple
+   if [ $UID -ne 0 ]; then
+       alias reboot='sudo reboot'
+       alias update='sudo apt-get upgrade'
+   fi
 
 Bash FOR loop examples
 ----------------------
@@ -63,10 +83,6 @@ Ignorer certaines lignes dans le history::
    # si ignoredups alors ignore les lignes en double (même commandes plusieurs fois en lignes)
    # si ignoreboth alors ces deux cas
 
-Savoir qui s'est connecté au serveur, d'où et quand::
-
-   last
-
 Couleurs::
 
    # le fichier /etc/DIR_COLOR contient les codes de couleurs utilisés par la commande ls 
@@ -75,14 +91,6 @@ Couleurs::
    echo -en "\033[31;40m" >> /etc/motd
    echo "Attention à ce que vous faites..." >> /etc/motd
    echo -en "\033[0m" >> /etc/motd
-
-Alias si pas root pour certaines commandes::
-
-   # dans ~/.bashrc par exemple
-   if [ $UID -ne 0 ]; then
-       alias reboot='sudo reboot'
-       alias update='sudo apt-get upgrade'
-   fi
 
 Activer pgup/pgdn search dans history::
 
@@ -108,7 +116,6 @@ Redirections:
 * ``(pwd; ls) >content.txt`` redirection de plusieurs commandes
 * ``echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab`` redirection lorsque pas root
 
-
 Ligne de commande:
 
 * Ctrl-A moves the cursor to the beginning of the command line
@@ -120,5 +127,5 @@ Ligne de commande:
 * Alt-T swap 2 words
 * Alt-. print last argument from previous command
 * Ctrl-Y undo a deletion  (yank)
-export EDITOR=vim
-ctrl-x ctrl-e copie la ligne actuelle et ouvre l'éditeur $EDITOR pour ensuite l'exécuter
+* Ctrl-x Ctrl-e copie la ligne actuelle et ouvre l'éditeur $EDITOR pour ensuite l'exécuter
+
