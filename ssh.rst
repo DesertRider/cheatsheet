@@ -39,7 +39,7 @@ Il y aura une connexion (un tunnel créé) entre M0 et M1 mais la redirection es
 Les transactions sont chiffrées entre M0 et M1, mais pas entre M1 et M2, sauf si un second tunnel ssh est créé entre M1 et M2.
 
 Redirections distantes
-~~~~~~~~~~~~~~~~~~~~~~
+......................
 
 ``M0:$ ssh -R 1234:HOSTNAME:80 M1``
 
