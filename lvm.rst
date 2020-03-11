@@ -3,9 +3,9 @@ LVM
 
 Création d'un disque en LVM
 
-#. Créer une partition unique de type 8e::
+1. Créer une partition unique de type 8e::
 
-   Fdisk /dev/sdc <<FIN
+   fdisk /dev/sdc <<FIN
    n
    p
    1
@@ -16,27 +16,27 @@ Création d'un disque en LVM
    w
    FIN
 
-#. Créer un volume physique LVM utilisant la partition créée::
+2. Créer un volume physique LVM utilisant la partition créée::
 
 pvcreate /dev/sdc1
 
-#. Création d'un volume group LVM::
+3. Création d'un volume group LVM::
 
 vgcreate volgrp_03 /dev/sdc1
 
-#. Affichage du volume physique LVM et du volume group créés::
+4. Affichage du volume physique LVM et du volume group créés::
 
 pvdisplay
 
-# Créer volume LVM "lv_data" sur le volume group créé, utiliser 100% de son espace::
+5. Créer volume LVM "lv_data" sur le volume group créé, utiliser 100% de son espace::
 
 lvcreate --name lv_data -l 100%FREE volgrp_03
 
-#. Créer le filesystem sur ce volume::
+6. Créer le filesystem sur ce volume::
 
 mkfs.ext4 /dev/volgrp_03/lv_data
 
-#. Créer le mount point, ajuster fstab et monter::
+7. Créer le mount point, ajuster fstab et monter::
 
    mkdir /DATA
    vim /etc/fstab
@@ -44,7 +44,7 @@ mkfs.ext4 /dev/volgrp_03/lv_data
    /dev/mapper/volgrp_03-lv_data /DATACMS                  ext4     defaults        0 0
    EOD
    
-#. MONTER LE VOLUME::
+8. MONTER LE VOLUME::
 
 mount -a
 
