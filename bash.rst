@@ -104,6 +104,15 @@ Activer pgup/pgdn search dans history::
    # Pour lister les binds actuels:
    bind -p
 
+Complétition
+------------
+
+Completition pour nom de répertoire ou de fichier::
+
+   complete -d cd
+   complete -f vim
+
+** Voir aussi /etc/bash_completion.d/ **
 
 Pour éviter l'interprétation d'une commande par un alias::
 
