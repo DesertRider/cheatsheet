@@ -1,8 +1,32 @@
 SSH
----
+===
 
+Connexion ssh sans mot de passe (avec clé uniquement)
+-----------------------------------------------------
+
+::
+
+   ssh-keygen -t rsa
+   ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
+ 
+Voir les clés publiques ssh d'un serveur
+----------------------------------------
+
+::
+
+   ssh-keyscan qxacmsw20.pra.shq.local
+
+Afficher le ssh server key fingerprint
+--------------------------------------
+
+::
+
+   file=$(mktemp)
+   ssh-keyscan serveur > $file 2> /dev/null
+   ssh-keygen -l -f $file
+   
 Redirection ssh / putty (port forwarding)
-.........................................
+-----------------------------------------
 
 Exemple de tunnel ssh fait par putty: la console CUPS n'est accessible qu'à localhost sur le port 631
 alors dans Putty on ouvre une session ssh, on modifie Connection > SSH > Tunnels, dans "Source port" on indique 631, dans Destination
@@ -86,18 +110,3 @@ socat sert principalement à relayer deux flux de données de manière bidirecti
 voir http://www.dest-unreach.org/socat/doc/socat.html#EXAMPLES
 
 
-Voir les clés publiques ssh d'un serveur
-----------------------------------------
-
-::
-
-   ssh-keyscan qxacmsw20.pra.shq.local
-
-Afficher le ssh server key fingerprint
---------------------------------------
-
-::
-
-   file=$(mktemp)
-   ssh-keyscan serveur > $file 2> /dev/null
-   ssh-keygen -l -f $file
