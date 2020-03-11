@@ -1,5 +1,5 @@
-Bienvenue sur mes Cheat Sheets's!
-=================================
+Mes Cheat Sheets
+================
 
 Contents:
 
@@ -8,3 +8,4 @@ Contents:
 
    docker
    lvm
+   ssh
