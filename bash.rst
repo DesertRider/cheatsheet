@@ -112,7 +112,7 @@ Completition pour nom de répertoire ou de fichier::
    complete -d cd
    complete -f vim
 
-** Voir aussi /etc/bash_completion.d/ **
+**Voir aussi /etc/bash_completion.d/**
 
 Pour éviter l'interprétation d'une commande par un alias::
 
