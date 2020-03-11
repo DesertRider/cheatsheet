@@ -23,6 +23,10 @@ Alias si pas root pour certaines commandes::
        alias update='sudo apt-get upgrade'
    fi
 
+
+.. NOTE::
+   On peut outrepasser un alias en débutant la commande voulue avec un "\\"
+   
 Bash FOR loop examples
 ----------------------
 
@@ -114,11 +118,8 @@ Completition pour nom de répertoire ou de fichier::
 
 **Voir aussi /etc/bash_completion.d/**
 
-Pour éviter l'interprétation d'une commande par un alias::
-
-   \commande
-   
 Redirections:
+-------------
 
 * ``ps 2>x.err`` redirection de stderr
 * ``ps >output.txt 2>&1`` redirection de stderr au même fichier que stdout
@@ -127,6 +128,7 @@ Redirections:
 * ``echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab`` redirection lorsque pas root
 
 Ligne de commande:
+------------------
 
 * Ctrl-A moves the cursor to the beginning of the command line
 * Ctrl-E moves the cursor to the end of the command line
