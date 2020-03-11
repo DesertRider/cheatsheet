@@ -1,8 +1,9 @@
 Bash
 ====
 
-Alias, fonctions et variables d'environnement utiles::
+Alias, fonctions et variables d'environnement utiles
 ----------------------------------------------------
+::
 
    alias dir='ls -lah'
    alias ..='cd .."
