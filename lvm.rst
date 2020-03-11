@@ -2,7 +2,7 @@ LVM
 ===
 
 Création d'un disque en LVM
-...........................
+---------------------------
 
 Créer une partition unique de type 8e::
 
@@ -43,7 +43,7 @@ MONTER LE VOLUME::
 
 
 Extension d'une partition LVM existante
-.......................................
+---------------------------------------
 
 Agrandir le disque virtuel, puis rescan du disque::
 
@@ -87,7 +87,7 @@ Resize du file system EXT3 du volume linux::
 
 
 AJOUT d'un disque et d'une partition LVM
-........................................
+----------------------------------------
 
 Ajouter disque physique ou virtuel, puis rescan du disque::
 
@@ -122,11 +122,8 @@ Créer le file system XFS du volume linux::
    mount /dev/sdc1
    # ou ajuster /etc/fstab et mount -a
 
-
-
-
 Autres commandes LVM
-....................
+--------------------
 
 * pvscan - scan all disks for physical volumes
 * lvscan - scan all disks for logical volumes
