@@ -18,38 +18,37 @@ Création d'un disque en LVM
 
 2. Créer un volume physique LVM utilisant la partition créée::
 
-pvcreate /dev/sdc1
+   pvcreate /dev/sdc1
 
 3. Création d'un volume group LVM::
 
-vgcreate volgrp_03 /dev/sdc1
+   vgcreate volgrp_03 /dev/sdc1
 
 4. Affichage du volume physique LVM et du volume group créés::
 
-pvdisplay
+   pvdisplay
 
 5. Créer volume LVM "lv_data" sur le volume group créé, utiliser 100% de son espace::
 
-lvcreate --name lv_data -l 100%FREE volgrp_03
+   lvcreate --name lv_data -l 100%FREE volgrp_03
 
 6. Créer le filesystem sur ce volume::
 
-mkfs.ext4 /dev/volgrp_03/lv_data
+   mkfs.ext4 /dev/volgrp_03/lv_data
 
 7. Créer le mount point, ajuster fstab et monter::
 
    mkdir /DATA
    vim /etc/fstab
    cat >> /etc/fstab <<EOD
-   /dev/mapper/volgrp_03-lv_data /DATACMS                  ext4     defaults        0 0
+   /dev/mapper/volgrp_03-lv_data /DATA                ext4     defaults        0 0
    EOD
    
 8. MONTER LE VOLUME::
 
-mount -a
+   mount -a
 
 Extension d'une partition LVM existante
----------------------------------------
 
 # 1) ajouter expace disque par VMware
 # rescan du disque...
