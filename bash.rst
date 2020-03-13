@@ -27,6 +27,12 @@ Alias si pas root pour certaines commandes::
 .. NOTE::
    On peut outrepasser un alias en débutant la commande voulue avec un "\\"
    
+Variables Bash relatives au process::
+
+   "$$" est le current pid 
+   "$!" est le pid du dernier process lancé en bg
+   
+   
 Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple::
 
    NOW=$(date +"%F_%Hh%M")
