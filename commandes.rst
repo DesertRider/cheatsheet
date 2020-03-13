@@ -72,6 +72,7 @@ Faire un find avec logical or::
    find / \( -iname snap.*.trc -o -iname core.*.dmp -o -iname heapdump.*.phd -o -iname javacore.*.txt \) -print
 
 Faire un find avec exclusion de répertoire::
+
    find / -path /media/nss -prune -o \( -iname snap.*.trc -o -iname core.*.dmp -o -iname heapdump.*.phd -o -iname javacore.*.txt \) -print  
 
 Trouver les fichiers récents plus gros que 500M::
@@ -86,8 +87,117 @@ Trouver les programmes qui ont le bit setuid ou setgid activé::
 vim
 ---
 
+::
+
+   */#					search next/prev occurence of word under cursor
+   hjkl				déplacement gauche, bas, haut, droit
+   w/b					saut avant/arrière au début du prochain mot
+   f/F					cherche avant/arr. du prochain car tapé sur la ligne
+   dw/cw				delete/change word
+   rx					change le car. sous le curseur par x
+   9G					va à la ligne 9
+   /{up}				search history
+   /.pache	wildcard	dans recherche
+   :s/1/2/g			remplace 1 par 2 pour la ligne
+   :%s/1/2/g			remplace 1 par 2 pour toutes les lignes
+   :%s/1/2/gi			remplace 1 par 2 pour toutes les lignes, case ins.
+   :%s/1/2/gc			rempl. 1 par 2 pour toutes les lignes avec conf.
+   :1,$s/1,2,/g        remplace 1 par 2 pour toutes les lignes (identique à :%s/1/2/g)
+   :.,$s/1,2,/g        remplace 1 par 2 pour la ligne courante jusqu'à la fin du document
+
+   :set [no]number		affiche les numéros de ligne ou pas
+   :set [no]hlsearch	highlight search oui/non
+   :nohlsearch			désactive le highlight du search courant seul.
+   :set viminfo+=/0	désactive search history
+   :set smartcase		pour search case insensitive
+   :set [no]ignorecase	recherche case sensitive ou pas
+   :edit fichier       pour ouvrir un second fichier
+   :set formatoptions-=r pour empêcher les commentaires "#" de se continuer automatiquement sur une nouvelle ligne après un Enter
+   :set wrap!          pour arrêter le wrap des lignes longues
+
+   #delete from here to end of file:
+   dG
+   #record macro in register "a"
+   qa(actions)q
+   #playback macro in register "a" 10 times
+   10@a
+   #repeat macro until end of file
+   :%normal @a
+
+
+
 Commandes de disques, partitions, ...
 -------------------------------------
 
-yum
----
+yum, RPM
+--------
+
+Installation de EPEL::
+
+   yum install epel-release
+
+yum pour télécharger package et dépendances + installation locale::
+
+   # attention: fait le download de toutes les dépendances, aucune vérification si elles sont déjà installées ou pas
+   yum repotrack mutt
+   yum localinstall mutt
+
+yum pour chercher qui fournit tel programme::
+
+   yum provides javac
+
+yum désinstallation d'un ou plusieurs packages::
+
+   yum remove tomcat*
+
+yum download and install all available security updates::
+
+   yum -y update --security
+
+yum download only package::
+
+   yum install vsftpd --downloadonly --downloaddir=/tmp
+
+historique de yum::
+
+   yum history
+
+yum update sauf certains package::
+
+   yum update --exclude kernel
+
+yum list les packages et repository d'où il provient::
+
+   yum list installed *openjdk*
+
+voir les script du package ou fichier::
+
+   rpm -q --scripts httpd
+   rpm -qp --scripts filename.rpm
+
+apt-get, apt-cache, etc (Debian)
+--------------------------------
+
+Affichage du package gammu installé::
+
+   apt-cache show gammu
+
+Update packages::
+
+   apt-get update
+
+Installation de netcat::
+
+   apt-get install netcat
+
+Retirer un package sans leur retirer leur fichiers de configuration::
+
+   apt-get remove vsftpd
+
+Retirer au complet le package::
+
+   apt-get purge vsftpd
+   ou
+   apt-get remove --purge vsftpd
+
+
