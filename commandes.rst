@@ -71,7 +71,7 @@ Faire un find avec logical or::
 
    find / \( -iname snap.*.trc -o -iname core.*.dmp -o -iname heapdump.*.phd -o -iname javacore.*.txt \) -print
 
-Faire un find avec exclusion de répertoire... ::
+Faire un find avec exclusion de répertoire::
    find / -path /media/nss -prune -o \( -iname snap.*.trc -o -iname core.*.dmp -o -iname heapdump.*.phd -o -iname javacore.*.txt \) -print  
 
 Trouver les fichiers récents plus gros que 500M::
