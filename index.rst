@@ -11,3 +11,4 @@ Contents:
    docker
    lvm
    ssh
+   disques
