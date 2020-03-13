@@ -1,6 +1,65 @@
 Commandes
 =========
 
+grep, egrep, ngrep, ...
+-----------------------
+
+Meta-char les plus utilisés pour grep
+::
+
+   ^           Beginning of the line
+   $           End of the line eight
+   \<          Beginning of the word
+   \>          End of the word
+   [abc]       matches any one of “a”, “b”, and “c”
+   [a-z]       matches any one character from “a” to “z”
+   [-:+]:      any one of ”-”, “:” and “+”
+   [^xyz]      None of the characters
+   .           Any single character file
+   +           One or more of the preceding expression
+   *           Any number (including none) of preceding single character
+   {min,max}   The preceding expression min times at minimum
+   |           The expression before or after (example: file|File: matches file and File)
+   (...)       Enclose alternatives for grouping with others (example: (f|F)ile: matches file and F)
+   ?           Zero or one of the preceding
+   \           Escape the following metacharacter
+
+grep des lignes non-commentées ou vides dans un fichier de configuration::
+
+   egrep -v '^\s*#|^$' nrpe.cfg
+
+grep avec contexte (lignes entourant l'élément trouvé)::
+
+   grep -A pour --after-context=NUM
+   grep -B pour --before-context=NUM
+   grep -C pour --context=NUM
+
+grep pipe dans less et utilisation de couleurs::
+
+   grep --color=always "Alias" fichier| less -R
+   # ou dans less, taper -R
+   # ou utiliser la variable d'environnement LESS comme suit
+   export LESS=-R
+
+grep des lignes non-commentées ou vides dans un fichier de configuration::
+
+   egrep -v '^\s*#|^$' nrpe.cfg
+
+grep avec no de la ligne trouvée::
+
+   grep -nr toto fichier
+
+Voir le contenu d'un fichier à partir d'un grep jusqu'à la fin::
+
+   tail -n +$(grep -n -m 1 "Jan 15 11:10" /var/log/postfix.log | cut -f1 -d:) /var/log/postfix.log |less
+
+
+
+grep de tcpdump::
+
+   yum install -y ngrep
+   ngrep -W byline "X-Forwarded-For: 192.168.200.241" port 80
+
 find
 ----
 
