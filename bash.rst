@@ -25,7 +25,7 @@ Alias si pas root pour certaines commandes::
 
 
 .. NOTE::
-   On peut outrepasser un alias en débutant la commande voulue avec un "\\"
+   On peut outrepasser un alias en débutant la commande voulue avec un "\\\"
    
 Variables Bash relatives au process::
 
