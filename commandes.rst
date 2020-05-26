@@ -258,5 +258,9 @@ Retirer au complet le package::
    apt-get purge vsftpd
    ou
    apt-get remove --purge vsftpd
+   
+Clean du cache::
+
+   apt-get clean all
 
 
