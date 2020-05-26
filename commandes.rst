@@ -185,8 +185,6 @@ vim
 
 
 
-Commandes de disques, partitions, ...
--------------------------------------
 
 yum, RPM
 --------
