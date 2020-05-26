@@ -18,6 +18,7 @@ Quelques commandes pêle-mêle::
    
 Reliées aux partitions::
 
+   findmnt
    parted
    fdisk
    cfdisk
