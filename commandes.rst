@@ -60,6 +60,7 @@ grep de tcpdump::
    yum install -y ngrep
    ngrep -W byline "X-Forwarded-For: 192.168.200.241" port 80
 
+
 find
 ----
 
@@ -141,6 +142,20 @@ Trouver les fichiers récents plus gros que 500M::
 Trouver les programmes qui ont le bit setuid ou setgid activé::
 
    find / -xdev -type f -perm +ug=s -exec ls -ldb {} \;
+
+
+rsync
+-----
+
+synchronisation entre 2 répertoires local
+   rsync -av --delete /zcm/ /zcm2/
+   # avec --dry-run, affichage de ce qui serait fait seulement, pas d'action
+   # avec -i output a change-summary for all updates
+   # avec -x reste sur le même file system (utile pour copier / mais pas /var si sur un 2e disque)
+   rsync -a -i --delete --dry-run --log-file=/var/log/rsync-data2.log /media/nss/DATA2/ /media/nss/DATA2NEW/
+
+rsync entre 2 serveurs
+   rsync -av --delete -e ssh /home1 root@qxdnfs20:/home1
 
 
 vim
