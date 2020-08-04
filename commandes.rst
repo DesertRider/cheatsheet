@@ -147,14 +147,19 @@ Trouver les programmes qui ont le bit setuid ou setgid activé::
 rsync
 -----
 
-synchronisation entre 2 répertoires local
-   rsync -av --delete /zcm/ /zcm2/
-   # avec --dry-run, affichage de ce qui serait fait seulement, pas d'action
-   # avec -i output a change-summary for all updates
-   # avec -x reste sur le même file system (utile pour copier / mais pas /var si sur un 2e disque)
-   rsync -a -i --delete --dry-run --log-file=/var/log/rsync-data2.log /media/nss/DATA2/ /media/nss/DATA2NEW/
+synchronisation entre 2 répertoires local::
 
-rsync entre 2 serveurs
+   rsync -av --delete /zcm/ /zcm2/
+
+# avec -i output a change-summary for all updates
+   rsync -a -i --delete --dry-run --log-file=/var/log/rsync-data2.log /media/nss/DATA2/ /media/nss/DATA2NEW/
+   
+   # avec -x reste sur le même file system (utile pour copier / mais pas /var si sur un 2e disque)
+   # avec --dry-run, affichage de ce qui serait fait seulement, pas d'action
+   rsync -avx --dry-run -delete / /mnt/new
+
+rsync entre 2 serveurs::
+
    rsync -av --delete -e ssh /home1 root@qxdnfs20:/home1
 
 
