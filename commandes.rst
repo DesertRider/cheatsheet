@@ -151,7 +151,7 @@ synchronisation entre 2 répertoires local::
 
    rsync -av --delete /zcm/ /zcm2/
 
-# avec -i output a change-summary for all updates
+   # avec -i output a change-summary for all updates
    rsync -a -i --delete --dry-run --log-file=/var/log/rsync-data2.log /media/nss/DATA2/ /media/nss/DATA2NEW/
    
    # avec -x reste sur le même file system (utile pour copier / mais pas /var si sur un 2e disque)
