@@ -259,6 +259,10 @@ Affichage du package gammu installé::
 
    apt-cache show gammu
 
+Liste des packages installés::
+
+   apt list --installed
+
 Update packages::
 
    apt-get update
