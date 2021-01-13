@@ -12,3 +12,4 @@ Contents:
    lvm
    ssh
    disques
+   mysql
