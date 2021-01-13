@@ -10,7 +10,7 @@ Création d'une BD::
    
 Destruction d'une BD::
 
-   DROP DATABASE [IF EXISTS] database_name;
+   DROP DATABASE [IF EXISTS] database_name;   
    
 Copie d'un BD mysql d'un serveur à un autre::
 
@@ -18,9 +18,14 @@ Copie d'un BD mysql d'un serveur à un autre::
    # Use ssh if you don't have direct access to remote mysql server (secure method):
    mysqldump db-name | ssh user@remote.box.com mysql db-name
 
-Dump du schéma seulement::
+Dump d'une BD::
 
-   mysqldump --no-data db-name
+   mysqldump db-name > backup.sql
+   mysqldump --no-data db-name > schema.sql
+   
+Restore d'une BD::
+
+   mysql -u root -p my_database < backup.sql
 
 Exécution d'une requête sql directement via le command line::
 
@@ -28,6 +33,19 @@ Exécution d'une requête sql directement via le command line::
 
 Quelques commandes SQL
 ----------------------
+
+Lister les BD::
+
+   show databases;
+   
+Lister les tables d'une BD::
+
+   use my_db;
+   show tables;
+   
+Voir la structure d'une table::
+
+   describe my_table;
 
 Size des databases MySql::
 
