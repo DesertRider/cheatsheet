@@ -56,35 +56,39 @@ Use a backslash escaped space to work around that:
 Entêtes
 -------
 
-Pour écrire un titre, il faut le souligner:
+Pour écrire un titre, il faut le souligner::
 
-*****
-Title
-*****
+    ######
+    Partie
+    ######
+    
+    ********
+    Chapitre
+    ********
 
-subtitle
-########
+    Section
+    =======
+    
+    Sous-section
+    ------------
+    
+    Sous-Sous-section
+    ^^^^^^^^^^^^^^^^^
 
-subsubtitle
-***********
 
-et ainsi de suite
+Deux règles:
 
+    Utiliser autant de caractères que la longueur du titre
+    L'utilisation des caractères est flexible mais doit être consistant
 
-Two rules:
+Normalement, aucun niveau de titre n'est attribué à certains caractères car la structure est déterminée à partir de la succession de titres. Cependant, pour la documentation Python, cette convention est utilisée que vous voudrez peut-être suivre:
 
-        use at least as many characters as the length of the title
-        characters usage is quite flexible but be consistent
-
-Normally, there are no heading levels assigned to certain characters as the structure is determined from the succession of headings. However, for the Python documentation, this convention is used which you may want to follow :
-
-    # with overline, for parts
-    * with overline, for chapters
-    =, for sections
-    -, for subsections
-    ^, for subsubsections
-    “, for paragraphs
-
+     # avec overline, pour les pièces
+     * avec overline, pour les chapitres
+     =, pour les sections
+     -, pour les sous-sections
+     ^, pour les sous-sous-sections
+     ", Pour les paragraphes
 
 
 Cheatsheets
