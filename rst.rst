@@ -104,6 +104,7 @@ reST est basé principalement sur des *directives* définies comme suit::
         contenu
 
 exemple::
+
     .. image:: ../images/test.png
         :width: 200pt
         
