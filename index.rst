@@ -13,3 +13,4 @@ Contents:
    ssh
    disques
    mysql
+   aws
