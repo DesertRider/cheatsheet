@@ -8,10 +8,10 @@ et https://cheat.readthedocs.io/en/latest/rst.html
 reStructuredText est un système d'analyse et de syntaxe de balisage en texte clair facile à lire, ce que vous voyez est ce que vous obtenez. Il est utile pour la documentation de programme en ligne (comme les docstrings Python), pour créer rapidement des pages Web simples et pour des documents autonomes.
 
 
-.. Avertissement::
+.. warning:: Avertissement!
 
-   * Tout comme Python, la syntaxe reST est sensible à l'indentation!
-   * reST requiert des lignes vides entre les paragraphes 
+   Tout comme Python, la syntaxe reST est sensible à l'indentation!
+   reST requiert des lignes vides entre les paragraphes 
    
 Usage de base
 =============
@@ -277,6 +277,93 @@ gives
     +--------------+------------+-----------+
 
 
+Include other reST files and TOC
+================================
+
+Since reST does not have facilities to interconnect several documents, or split
+documents into multiple output files, Sphinx uses a custom directive to add 
+relations between the single files the documentation is made of, as well as 
+tables of contents. The toctree directive is the central element. 
+
+.. code-block:: rest
+
+    .. toctree::
+        :maxdepth: 2
+
+        intro
+        chapter1
+        chapter2
+
+Globbing can be used by adding the *glob* option:
+
+.. code-block:: rest
+
+    .. toctree::
+        :glob:
+
+        intro*
+        recipe/*
+        *
+
+The name of the file is used to create the title in the TOC. You may want to change this behaviour by changing the toctree as follows:
+
+.. code-block:: rest
+       
+    .. toctree::
+        :glob:
+       
+        intro
+        Chapter1 description <chapter1>
+
+Comments and aliases
+====================
+
+:Comments: comments can be made by adding two dots at the beginning of a line as follows::
+
+    .. comments
+
+:Aliases:
+
+
+    The first method is to add at end of your reST document something like::
+
+        .. _Python: http://www.python.org/
+
+    Then, write your text inserting the keywrod ``Python_`` . The final result will be as follows: Python_ . 
+
+    A second method is as follows::
+
+        .. |longtext| replace:: this is a very very long text to include
+
+    and then insert  `|longtext|` wherever needed.
+ 
+    .. note::
+        Note that when you define the reference or alias, the underscore is before the keyword. However, when you refer to it, the underscore is at the end. The underscore after the keyword is also used for internal references, citations, aliases ... 
+
+
+
+##################
+Special directives
+##################
+
+colored boxes: note, seealso, todo and warnings
+=================================================
+
+There are simple directives like **seealso** that creates nice colored boxes:
+
+.. seealso:: This is a simple **seealso** note. 
+
+created using::
+
+    .. seealso:: This is a simple **seealso** note. Other inline directive may be included (e.g., math :math:`\alpha`) but not al of them.
+
+You have also the **note** and **warning** directives:
+
+.. note::  This is a **note** box.
+
+.. warning:: note the space between the directive and the text
+
+.. todo:: a todo box
 
 
 Cheatsheets
