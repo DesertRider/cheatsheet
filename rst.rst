@@ -6,20 +6,25 @@ et https://cheat.readthedocs.io/en/latest/rst.html
 
 reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
 
+Warning:
+
+   like Python, reST syntax is sensitive to indentation!
+   reST requires blank lines between paragraphs 
+   
 basic usage:	
 
     use one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
 
-    *italic*
-    **bold**
+        *italic*
+        **bold**
 
     double backquotes are used to make a text verbatim. For instance, it you want to use special characters such as *::
 
-    This ``*`` character is not interpreted
+        This ``*`` character is not interpreted
 
-    Finally, the single backquote is used for reST special commands (e.g., hyper links with spaces):
+    Finally, the single backquote is used for reST special commands (e.g., hyper links with spaces)::
 
-    This is how to create hyperlinks (see later)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
+        This is how to create hyperlinks (see later)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
 
     Note
 
