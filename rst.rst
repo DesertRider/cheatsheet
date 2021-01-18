@@ -1,5 +1,6 @@
+****************
 reStructuredText
-================
+****************
 
 Réf.: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#
 et https://cheat.readthedocs.io/en/latest/rst.html
@@ -81,7 +82,7 @@ Deux règles:
     Utiliser autant de caractères que la longueur du titre
     L'utilisation des caractères est flexible mais doit être consistant
 
-Normalement, aucun niveau de titre n'est attribué à certains caractères car la structure est déterminée à partir de la succession de titres. Cependant, pour la documentation Python, cette convention est utilisée que vous voudrez peut-être suivre:
+Normalement, aucun niveau de titre n'est attribué à certains caractères car la structure est déterminée à partir de la succession de titres. Cependant, pour la documentation Python, cette convention est utilisée que vous voudrez peut-être suivre::
 
      # avec overline, pour les pièces
      * avec overline, pour les chapitres
