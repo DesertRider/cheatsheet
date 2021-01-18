@@ -8,11 +8,10 @@ et https://cheat.readthedocs.io/en/latest/rst.html
 reStructuredText est un système d'analyse et de syntaxe de balisage en texte clair facile à lire, ce que vous voyez est ce que vous obtenez. Il est utile pour la documentation de programme en ligne (comme les docstrings Python), pour créer rapidement des pages Web simples et pour des documents autonomes.
 
 
-.. warning::
+.. Avertissement::
 
-   Tout comme Python, la syntaxe reST est sensible à l'indentation!
-   
-   reST requiert des lignes vides entre les paragraphes 
+   * Tout comme Python, la syntaxe reST est sensible à l'indentation!
+   * reST requiert des lignes vides entre les paragraphes 
    
 Usage de base
 =============
