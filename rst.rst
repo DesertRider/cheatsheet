@@ -8,12 +8,12 @@ reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext mark
 
 basic usage:	
 
-    use one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold:
+    use one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
 
     *italic*
     **bold**
 
-    double backquotes are used to make a text verbatim. For instance, it you want to use special characters such as *:
+    double backquotes are used to make a text verbatim. For instance, it you want to use special characters such as *::
 
     This ``*`` character is not interpreted
 
@@ -40,8 +40,10 @@ Use a backslash escaped space to work around that:
 
 
 
+
+
 Section de Dan Poirier
-======================
+----------------------
 
 
 REST reStructuredText notes
