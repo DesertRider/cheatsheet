@@ -4,47 +4,57 @@ reStructuredText
 Réf.: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#
 et https://cheat.readthedocs.io/en/latest/rst.html
 
-reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
+reStructuredText est un système d'analyse et de syntaxe de balisage en texte clair facile à lire, ce que vous voyez est ce que vous obtenez. Il est utile pour la documentation de programme en ligne (comme les docstrings Python), pour créer rapidement des pages Web simples et pour des documents autonomes.
 
-Warning:
 
-   like Python, reST syntax is sensitive to indentation!
-   reST requires blank lines between paragraphs 
+Avertissement:
+
+   Tout comme Python, la syntaxe reST est sensible à l'indentation!
+   reST requiert des lignes vides entre les paragraphes 
    
-basic usage:	
+Usage de base
+-------------
 
-    use one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
+Utiliser un astérisque de chaque côté du texte pour le mettre en italique, 2 astuse one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
 
-        *italic*
-        **bold**
+    *italic*
+    **bold**
 
-    double backquotes are used to make a text verbatim. For instance, it you want to use special characters such as *::
+Les double backquotes sont utilisées pour rendre le texte litéralement. Par exemple, pour utiliser le caractère spécial *::
 
-        This ``*`` character is not interpreted
+    Le caractère spécial ``*`` n'est pas interprété
 
-    Finally, the single backquote is used for reST special commands (e.g., hyper links with spaces)::
+Finallement, un single backquote est utilisé pour les commandes spéciales reST (par exemple, hyperliens avec des espaces)::
 
-        This is how to create hyperlinks (see later)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
+    Voici comment créer un hyperlien (voir plus loin)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
 
-    Note
+Note
 
-    If asterisks or backquotes appear in running text and could be confused with inline markup delimiters, they have to be escaped with a backslash.
+    Si l'astérisque ou backquotes apparait dans le texte et pourrait être confondu comme délimiteur markup, il faut le précéder d'un backslash.
 
-advanced usage:	
 
-Be aware of some restrictions of this markup:
+Usage avancé
+------------
+Soyez conscient de certaines restrictions de ce balisage:
 
-    it may not be nested,
-    content may not start or end with whitespace: * text* is wrong,
-    it must be separated from surrounding text by non-word characters.
+    il peut ne pas être imbriqué,
+    le contenu peut ne pas commencer ou se terminer par un espace: * le texte * est incorrect,
+    il doit être séparé du texte environnant par des caractères autres que des mots.
+
+Utilisez un espace d'échappement avec une barre oblique inverse pour contourner ce problème:
+
+     c'est un paragraphe ``*long\*`` est correct et donne *longish*.
+     c'est un paragraphe ``long*ish* n'est pas interprété comme prévu. Vous devriez utiliser ceci est un paragraphe ``long\*ish*`` pour obtenir un paragraphe long\*ish*
+
 
 Use a backslash escaped space to work around that:
 
     this is a *longish* paragraph is correct and gives longish.
-    this is a long*ish* paragraph is not interpreted as expected. You should use this is a long\ *ish* paragraph to obtain longish paragraph
+    this is a long*ish* paragraph is not interpreted as expected. You should use this is a long\*ish* paragraph to obtain longish paragraph
 
 
-
+Entêtes
+-------
 
 
 Section de Dan Poirier
