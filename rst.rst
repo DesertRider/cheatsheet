@@ -1,6 +1,49 @@
 reStructuredText
 ================
 
+Réf.: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#
+et https://cheat.readthedocs.io/en/latest/rst.html
+
+reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
+
+basic usage:	
+
+    use one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold:
+
+    *italic*
+    **bold**
+
+    double backquotes are used to make a text verbatim. For instance, it you want to use special characters such as *:
+
+    This ``*`` character is not interpreted
+
+    Finally, the single backquote is used for reST special commands (e.g., hyper links with spaces):
+
+    This is how to create hyperlinks (see later)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
+
+    Note
+
+    If asterisks or backquotes appear in running text and could be confused with inline markup delimiters, they have to be escaped with a backslash.
+
+advanced usage:	
+
+Be aware of some restrictions of this markup:
+
+    it may not be nested,
+    content may not start or end with whitespace: * text* is wrong,
+    it must be separated from surrounding text by non-word characters.
+
+Use a backslash escaped space to work around that:
+
+    this is a *longish* paragraph is correct and gives longish.
+    this is a long*ish* paragraph is not interpreted as expected. You should use this is a long\ *ish* paragraph to obtain longish paragraph
+
+
+
+Section de Dan Poirier
+======================
+
+
 REST reStructuredText notes
 (see also Sphinx notes)
 
