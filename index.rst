@@ -15,3 +15,4 @@ Contents:
    mysql
    aws
    rst
+   rst_tutorial
