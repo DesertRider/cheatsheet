@@ -108,8 +108,6 @@ exemple::
     .. image:: ../images/test.png
         :width: 200pt
         
-Attention
-
 Notez l'espace entre la directive et son argument ainsi que la ligne vide entre l'option et le contenu
 
 
