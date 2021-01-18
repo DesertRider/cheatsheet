@@ -29,9 +29,7 @@ Finallement, un single backquote est utilisé pour les commandes spéciales reST
 
     Voici comment créer un hyperlien (voir plus loin)  `OpenAlea wiki <openalea.gforge.inria.fr>`_
 
-Note
-
-    Si l'astérisque ou backquotes apparait dans le texte et pourrait être confondu comme délimiteur markup, il faut le précéder d'un backslash.
+.. note::     Si l'astérisque ou backquotes apparait dans le texte et pourrait être confondu comme délimiteur markup, il faut le précéder d'un backslash.
 
 
 Usage avancé
