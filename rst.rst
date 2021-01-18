@@ -14,7 +14,7 @@ Avertissement:
    reST requiert des lignes vides entre les paragraphes 
    
 Usage de base
--------------
+=============
 
 Utiliser un astérisque de chaque côté du texte pour le mettre en italique, 2 astuse one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
 
@@ -35,7 +35,8 @@ Note
 
 
 Usage avancé
-------------
+============
+
 Soyez conscient de certaines restrictions de ce balisage:
 
     il peut ne pas être imbriqué,
@@ -55,7 +56,7 @@ Use a backslash escaped space to work around that:
 
 
 Entêtes
--------
+=======
 
 Pour écrire un titre, il faut le souligner::
 
@@ -92,8 +93,28 @@ Normalement, aucun niveau de titre n'est attribué à certains caractères car l
      ", Pour les paragraphes
 
 
+Directives
+==========
+
+reST est basé principalement sur des *directives* définies comme suit::
+
+    .. <nom>:: <arguments>
+        :<option>: <valeur>
+        
+        contenu
+
+exemple::
+    .. image:: ../images/test.png
+        :width: 200pt
+        
+Attention
+
+Notez l'espace entre la directive et son argument ainsi que la ligne vide entre l'option et le contenu
+
+
+
 Cheatsheets
------------
+===========
 
 Copied from http://docs.sphinxdocs.com/en/latest/cheatsheet.html - thanks
 to Read The Docs.
