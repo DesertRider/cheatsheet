@@ -14,3 +14,4 @@ Contents:
    disques
    mysql
    aws
+   rst
