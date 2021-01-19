@@ -16,3 +16,5 @@ Contents:
    aws
    rst
    rst_tutorial
+
+.. image:: images/ball1.gif
