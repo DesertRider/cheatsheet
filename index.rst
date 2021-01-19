@@ -17,4 +17,4 @@ Contents:
    rst
    rst_tutorial
 
-.. image:: images/ball1.gif
+.. image:: ball1.gif
