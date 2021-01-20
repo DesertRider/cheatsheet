@@ -13,6 +13,5 @@ Contents:
    ssh
    disques
    mysql
-   aws
    rst
    rst_tutorial
