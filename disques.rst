@@ -3,7 +3,7 @@ Disques, partitions, multipath, ...
 
 Quelques commandes pêle-mêle::
 
-   lsblk -o +uuid,partuuid
+   lsblk -o +uuid,partuuid,label
    blkid /dev/sda1
    lsscsi
    lsusb
