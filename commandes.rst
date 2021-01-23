@@ -258,6 +258,10 @@ apt-get, apt-cache, etc (Debian)
 Affichage du package gammu installé::
 
    apt-cache show gammu
+   
+Recherche d'un package::
+
+   apt-cache search cups-pdf
 
 Liste des packages installés::
 
