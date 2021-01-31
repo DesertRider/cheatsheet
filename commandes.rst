@@ -262,6 +262,10 @@ Affichage du package gammu installé::
 Recherche d'un package::
 
    apt-cache search cups-pdf
+   
+Affiche le contenu du package installé (fichiers installés)::
+
+   sudo dpkg-query -L logwatch
 
 Liste des packages installés::
 
