@@ -23,6 +23,10 @@ Dump d'une BD::
    mysqldump db-name > backup.sql
    mysqldump --no-data db-name > schema.sql
    
+Dump d'une table d'une BD::
+
+   mysqldump db-name table
+   
 Restore d'une BD::
 
    mysql -u root -p my_database < backup.sql
