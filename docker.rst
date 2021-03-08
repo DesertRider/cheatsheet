@@ -21,6 +21,10 @@ Start a container from an image, run a command, and when the
 command exits, stop the container without saving any changes::
 
    docker run --rm -it imagetag bash
+   
+Démarrer un container et le laisser s'exécuter en background, remapper port 22 sur 2222::
+
+   docker run -it -d -p 2222:22 ubuntu-with-sshd
 
 Cleanup
 .......
