@@ -51,6 +51,19 @@ Voir la structure d'une table::
 
    describe my_table;
 
+Détruire une ligne::
+
+   remove from users where username like 'xxx';
+   
+Mettre à jour plusieurs colonnes de plusieurs lignes::
+
+   update users
+      set oauth2_user_id = users.username,
+          disable_login_form = 1,
+          timezone = NULL,
+          language = NULL
+      where username like 'shqsrc';
+
 Size des databases MySql::
 
    SELECT table_schema "DB Name", 
