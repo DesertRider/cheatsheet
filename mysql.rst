@@ -21,6 +21,8 @@ Copie d'un BD mysql d'un serveur à un autre::
 Dump d'une BD::
 
    mysqldump db-name > backup.sql
+   
+Dump du schéma seulement::
    mysqldump --no-data db-name > schema.sql
    
 Dump d'une table d'une BD::
