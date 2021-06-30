@@ -23,6 +23,7 @@ Dump d'une BD::
    mysqldump db-name > backup.sql
    
 Dump du schéma seulement::
+
    mysqldump --no-data db-name > schema.sql
    
 Dump d'une table d'une BD::
