@@ -11,7 +11,7 @@ Try and think of Git as a photographer taking a picture on his camera (Local Wor
 
 Later when he wants to publish his work to his website or in return download the newest photos on his website that might have been uploaded by his co-worker he compares the photos that are in his computer (HEAD) and his website (Remote Repository) and only downloads or uploads the new photos . Of course that there is much more to that then this but for now it will help you understand the general idea behind the workflow.
 
-Tiré de la `page suivante: https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997_
+Tiré de la `page suivante: <https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997>`_
 
 Workflow
 --------
