@@ -6,8 +6,7 @@ Commandes principales
 
 :simple table:
 
-   Configuration
-   -------------
+   Configuration::
 
       Configurer le nom de l'utilisateur:
       
@@ -30,8 +29,47 @@ Commandes principales
          git config --global https.proxy https://httpproxy:3128
          git config --global http.proxy http://httpproxy:3128
 
-
+   Initialisation d'un repo::
    
+      Initialise un répertoire pour suivi de version:
+      
+         git init
+         
+      Cloner un repo existant:
+      
+         git clone https://github.com/DesertRider/cheatsheet.git
+         git clone ssh://user@site.com/directory/repository.git
+         
+   Commandes principales::
+   
+      Ajouter un fichier ou répertoire au suivi de version:
+      
+         git add fichier/répertoire
+         
+      Voir les modifications récentes:
+      
+         git log
+         
+      Voir ce qui a changé pour un fichier depuis une certaine version:
+      
+         git diff
+         
+      Affiche les changements en attente d'un commit:
+      
+         git status
+      
+      Pousse les changements dans le repo local:
+      
+         git commit [ -m message ]
+         
+      Pousse les changements commits dans le repo distant:
+      
+         git push
+         
+      Récupère les changements qui sont dans le repo distant:
+      
+         git pull
+    
 .. csv-table:: 
    :header: "Commandes", "Description"
    :widths: 15, 30
