@@ -54,7 +54,8 @@ Commandes principales
          
    Voir les modifications récentes::
       
-      git log
+      git log [fichier] [--pretty=one-line]
+      
          
    Voir ce qui a changé pour un fichier depuis une certaine version::
       
@@ -75,7 +76,20 @@ Commandes principales
    Récupère les changements qui sont dans le repo distant::
       
       git pull
+      
+   Ignorer des répertoires/fichiers::
+   
+      créer un fichier .gitignore et lister les éléments à ignorer
     
+:Remote repository:
+
+   Afficher les informations sur les remote repositories utilisés::
+   
+      git remote -v
+      
+   
+      
+
 
 3 cas d'initialisation d'un repo
 --------------------------------
