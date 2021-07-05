@@ -42,7 +42,11 @@ Commandes principales
    
    Ajouter un fichier ou répertoire au suivi de version::
       
-      git add fichier/répertoire
+      git add répertoire/fichier
+      
+   Retirer le fichier de ceux ajouté par git add::
+   
+      git restore --staged fichier
       
    Enlever un changement (pas le fichier, le changement prévu au repo)::
    
