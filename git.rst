@@ -3,6 +3,34 @@ Git
 
 Commandes principales
 ---------------------
+
+:simple table:
+
+   Configuration
+   -------------
+
+      Configurer le nom de l'utilisateur:
+      
+         git config --global user.name "My name"
+         
+      Configurer l'adresse de courriel:
+      
+         git config --global user.email "my.email@domain.com"
+         
+      Sauvegarder les crédentiels pour le repo distant:
+      
+         git config credential.helper store
+         
+      Ignore les problèmes de certificats:
+      
+         git config --global http.sslVerify false
+         
+      Configure le proxy à utiliser:
+      
+         git config --global https.proxy https://httpproxy:3128
+         git config --global http.proxy http://httpproxy:3128
+
+
    
 .. csv-table:: 
    :header: "Commandes", "Description"
@@ -12,6 +40,10 @@ Commandes principales
     "git config --global user.email my.email@domain.com", "Configure l'adresse de courriel"
     "git config credential.helper store", "permet de sauvegarder les crédentiels pour repo distant"
     "git config --global http.sslVerify false", "ignore les problèmes de certificats"
+    "git config --global https.proxy https://httpproxy:3128"
+    "git config --global http.proxy http://httpproxy:3128"
+    
+    
     "git init", "initialiser un répertoire pour avoir un repo"
     "git clone https://github.com/DesertRider/cheatsheet.git", "Cloner repo (http/s, ssh)"
     "git add fichier/répertoire", "ajouter un fichier au suivi de version"
