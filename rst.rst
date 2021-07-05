@@ -13,7 +13,7 @@ reStructuredText est un système d'analyse et de syntaxe de balisage en texte cl
 Usage de base
 =============
 
-Utiliser un astérisque de chaque côté du texte pour le mettre en italique, 2 astuse one asterisk on each side of a text you want to emphasize in italic and 2 asterisks in you want to make it bold::
+Utiliser un astérisque de chaque côté du texte pour le mettre en italique, 2 pour le mettre en gras::
 
     *italic*
     **bold**
