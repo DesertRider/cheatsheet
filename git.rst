@@ -23,6 +23,10 @@ Workflow
 .. image:: https://images.osteele.com/2008/git-transport.png
       :width: 200pt
 
+Mêmes commandes, mais selon la ligne de temps:
+.. image:: https://images.osteele.com/2008/git-workflow.png
+      :width: 200pt
+
 
 Commandes principales
 ---------------------
