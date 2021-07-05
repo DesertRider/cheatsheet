@@ -2,16 +2,20 @@ Git
 ===
 
 
-Your local repository consists of three “trees” maintained and tracked by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the HEAD which points to the last commit you’ve made.
+Votre dépôt (*repository*) consiste de 3 structures arborescentes maintenues et monitorées par git. Le premier est votre répertoire de travail (*working directory*) et contient les fichiers sur lesquels vous travaillez. Le second est l'**Index** qui agit comme une aire de transition et finalement la tête (**HEAD**) qui pointe le dernier commit qui a été fait.
 
 .. image:: https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.
       :width: 200pt
 
-Try and think of Git as a photographer taking a picture on his camera (Local Workspace) downloading it to his computer (HEAD) and when ready publishes on his website (Remote Repository). Before downloading the photos to the computer he checks to see if he has any new photos on his camera that are different then the ones on his computer (This would be the index / staging phase).
+Voyez Git comme un photographe qui prend une photo avec sa camera (répertoire de travail), puis la télécharge sur son ordinateur (HEAD) et lorsque prêt la publie sur son site web (**Remote Repository**). Avant de télécharger les photos dans l'ordinateur, il vérifie si il a de nouvelles photos sur sa caméra qui diffèrent de celles de son ordinateur (ce serait son **Index** / phase *staging*).
+
+Plus tard quand il veut publier son travail sur son site web ou télécharger les photos les plus récentes sur son site web qui pourraient avoir été déjà envoyées par un collègue, il compare les photos sur son ordinateur (**HEAD**) et son site web (**Remote Repository**), et va seulement transférer (upload/download) les nouvelles photos.
+
+Il y a beaucoup plus que ça avec Git, mais cela vous donne une bonne idée du le workflow.
 
 Later when he wants to publish his work to his website or in return download the newest photos on his website that might have been uploaded by his co-worker he compares the photos that are in his computer (HEAD) and his website (Remote Repository) and only downloads or uploads the new photos . Of course that there is much more to that then this but for now it will help you understand the general idea behind the workflow.
 
-Tiré de la page suivante: `<https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997>`_
+Copié de cette page: `<https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997>`_
 
 Workflow
 --------
