@@ -1,6 +1,13 @@
 Git
 ===
 
+Workflow
+--------
+
+.. image:: https://miro.medium.com/max/481/0*psCSE-BxW3zn4Ya1.png
+      :width: 200pt
+
+
 Commandes principales
 ---------------------
 
