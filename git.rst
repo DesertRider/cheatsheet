@@ -25,6 +25,7 @@ Commandes principales
 
 Personnalisation du message lors du commit
 ------------------------------------------
+::
 
     cat > ~/.gitmessage <<FIN
     # |<--- Résumez le changement en 50 car. max --->|
