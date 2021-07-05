@@ -4,7 +4,7 @@ Git
 Commandes principales
 ---------------------
    
-.. csv-table:: git-commandes-table
+.. csv-table:: 
    :header: "Commandes", "Description"
    :widths: 15, 30
 
