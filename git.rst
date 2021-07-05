@@ -27,6 +27,11 @@ Commandes principales
       git config --global https.proxy https://httpproxy:3128
       git config --global http.proxy http://httpproxy:3128
 
+   Lister les éléments de la configuration en fonction::
+   
+      git config -l
+      
+      
 :Initialisation:
    
    Initialise un répertoire pour suivi de version::
