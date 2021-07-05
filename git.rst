@@ -20,7 +20,7 @@ Traduction maison de cette page: `<https://medium.com/@talgoldfus/better-underst
 Workflow
 --------
 
-.. image:: https://miro.medium.com/max/481/0*psCSE-BxW3zn4Ya1.png
+.. image:: https://images.osteele.com/2008/git-transport.png
       :width: 200pt
 
 
