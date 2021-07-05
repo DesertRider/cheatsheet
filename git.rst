@@ -10,61 +10,61 @@ Commandes principales
      
       git config --global user.name "My name"
          
-   Configurer l'adresse de courriel:
+   Configurer l'adresse de courriel::
       
       git config --global user.email "my.email@domain.com"
          
-   Sauvegarder les crédentiels pour le repo distant:
+   Sauvegarder les crédentiels pour le repo distant::
       
       git config credential.helper store
          
-   Ignore les problèmes de certificats:
+   Ignore les problèmes de certificats::
       
       git config --global http.sslVerify false
          
-   Configure le proxy à utiliser:
+   Configure le proxy à utiliser::
       
       git config --global https.proxy https://httpproxy:3128
       git config --global http.proxy http://httpproxy:3128
 
-:Initialisation d'un repo:
+:Initialisation::
    
-   Initialise un répertoire pour suivi de version:
+   Initialise un répertoire pour suivi de version::
       
       git init
          
-   Cloner un repo existant:
+   Cloner un repo existant::
       
       git clone https://github.com/DesertRider/cheatsheet.git
       git clone ssh://user@site.com/directory/repository.git
          
-:Commandes principales:
+:Changements:
    
-   Ajouter un fichier ou répertoire au suivi de version:
+   Ajouter un fichier ou répertoire au suivi de version::
       
       git add fichier/répertoire
          
-   Voir les modifications récentes:
+   Voir les modifications récentes::
       
       git log
          
-   Voir ce qui a changé pour un fichier depuis une certaine version:
+   Voir ce qui a changé pour un fichier depuis une certaine version::
       
       git diff
          
-   Affiche les changements en attente d'un commit:
+   Affiche les changements en attente d'un commit::
       
       git status
       
-   Pousse les changements dans le repo local:
+   Pousse les changements dans le repo local::
       
       git commit [ -m message ]
          
-   Pousse les changements commits dans le repo distant:
+   Pousse les changements commits dans le repo distant::
       
       git push
          
-   Récupère les changements qui sont dans le repo distant:
+   Récupère les changements qui sont dans le repo distant::
       
       git pull
     
