@@ -8,8 +8,8 @@ Commandes principales
    :header: "Commandes", "Description"
    :widths: 15, 30
 
-    "git config --global user.name ``"My name``"", "Configure le nom de l'utilisateur"
-    "git config --global user.email ``"my.email@domain.com```"", "Configure l'adresse de courriel"
+    "git config --global user.name MyName", "Configure le nom de l'utilisateur"
+    "git config --global user.email my.email@domain.com", "Configure l'adresse de courriel"
     "git config credential.helper store", "permet de sauvegarder les crédentiels pour repo distant"
     "git config --global http.sslVerify false", "ignore les problèmes de certificats"
     "git init", "initialiser un répertoire pour avoir un repo"
