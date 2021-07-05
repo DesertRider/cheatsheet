@@ -27,7 +27,7 @@ Commandes principales
       git config --global https.proxy https://httpproxy:3128
       git config --global http.proxy http://httpproxy:3128
 
-:Initialisation::
+:Initialisation:
    
    Initialise un répertoire pour suivi de version::
       
@@ -68,28 +68,42 @@ Commandes principales
       
       git pull
     
-.. csv-table:: 
-   :header: "Commandes", "Description"
-   :widths: 15, 30
 
-    "git config --global user.name MyName", "Configure le nom de l'utilisateur"
-    "git config --global user.email my.email@domain.com", "Configure l'adresse de courriel"
-    "git config credential.helper store", "permet de sauvegarder les crédentiels pour repo distant"
-    "git config --global http.sslVerify false", "ignore les problèmes de certificats"
-    "git config --global https.proxy https://httpproxy:3128"
-    "git config --global http.proxy http://httpproxy:3128"
-    
-    
-    "git init", "initialiser un répertoire pour avoir un repo"
-    "git clone https://github.com/DesertRider/cheatsheet.git", "Cloner repo (http/s, ssh)"
-    "git add fichier/répertoire", "ajouter un fichier au suivi de version"
-    "git log", "voir les modifications récentes"
-    "git diff", "voir ce qui a changé pour un fichier depuis une certaine version"
-    "git revert", "annule une unique modification"
-    "git status", "affiche les changements en attente d'un commit"
-    "git commit [-m message]", "pousse les changements dans le repo local, avec en option le message de commit"
-    "git push", "pousse les changements commits dans le repo distant"  
-    "git pull", "récupère les changements qui sont dans le repo distant"
+3 cas d'initialisation d'un repo
+--------------------------------
+
+:Create a new repository:
+
+   ::
+   
+      git clone https://site.com/directory/myrepo.git
+      cd myrepo
+      touch README.md
+      git add README.md
+      git commit -m "add README"
+      git push -u origin master
+
+:Existing folder:
+
+   ::
+
+      cd existing_folder
+      git init
+      git remote add origin https://site.com/directory/myrepo,git
+      git add .
+      git commit -m "Initial commit"
+      git push -u origin master
+
+:Existing Git repository:
+
+   ::
+   
+      cd existing_repo
+      git remote rename origin old-origin
+      git remote add origin https://site.com/directory/myrepo.git
+      git push -u origin --all
+      git push -u origin --tags
+
 
 Personnalisation du message lors du commit
 ------------------------------------------
