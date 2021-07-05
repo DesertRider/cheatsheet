@@ -88,7 +88,8 @@ Commandes principales
    Voir les modifications récentes::
       
       git log [fichier] [--pretty=one-line]
-      
+      git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+      # on peut avoir des réglages de formattage dans gitconfig (général, ou par repos)
          
    Voir ce qui a changé pour un fichier depuis une certaine version::
       
