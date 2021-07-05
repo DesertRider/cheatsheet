@@ -43,6 +43,10 @@ Commandes principales
    Ajouter un fichier ou répertoire au suivi de version::
       
       git add fichier/répertoire
+      
+   Enlever un changement (pas le fichier, le changement prévu au repo)::
+   
+      git rm fichier
          
    Voir les modifications récentes::
       
