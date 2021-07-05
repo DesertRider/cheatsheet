@@ -1,6 +1,18 @@
 Git
 ===
 
+
+Your local repository consists of three “trees” maintained and tracked by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the HEAD which points to the last commit you’ve made.
+
+.. image:: https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.
+      :width: 200pt
+
+Try and think of Git as a photographer taking a picture on his camera (Local Workspace) downloading it to his computer (HEAD) and when ready publishes on his website (Remote Repository). Before downloading the photos to the computer he checks to see if he has any new photos on his camera that are different then the ones on his computer (This would be the index / staging phase).
+
+Later when he wants to publish his work to his website or in return download the newest photos on his website that might have been uploaded by his co-worker he compares the photos that are in his computer (HEAD) and his website (Remote Repository) and only downloads or uploads the new photos . Of course that there is much more to that then this but for now it will help you understand the general idea behind the workflow.
+
+.. seealso:: Tiré de la page suivante: https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997
+
 Workflow
 --------
 
