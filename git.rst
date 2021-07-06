@@ -37,6 +37,12 @@ Mêmes commandes, mais selon la ligne de temps:
 
 .. image:: https://images.osteele.com/2008/git-workflow.png
       :width: 200pt
+      
+Exemple de Workflow avec AWS CodeCommit
+---------------------------------------
+
+.. image:: AWS-git-workflow.png
+      :width: 200pt
 
 Cycle de vie des états des fichiers
 -----------------------------------
@@ -97,17 +103,25 @@ Commandes principales
       
       git add répertoire/fichier
       
-   Retirer le fichier de ceux ajouté par git add::
+   Désindexer un fichier indexé (mis dans le *stage area*) (pas de changement au fichier toutefois)::
    
-      git restore --staged fichier
+      git reset HEAD fichier
+      
+   Retourner un fichier à l'état indexé::
+   
+      git checkout fichier
       
    Enlever un changement (pas le fichier, le changement prévu au repo)::
    
       git rm fichier
-         
+      
+   Enlever le dernier changement qui a eu un *commit*::
+   
+      git revert HEAD
+
    Voir les modifications récentes::
       
-      git log [fichier] [--pretty=one-line]
+      git log [fichier] [--pretty=one-line] [--all]
       git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
       # on peut avoir des réglages de formattage dans gitconfig (général, ou par repos)
          
@@ -122,6 +136,10 @@ Commandes principales
    Pousse les changements dans le repo local::
       
       git commit [ -m message ]
+      
+   Change le dernier commit pour un changement mineur (amendement)::
+   
+      git commit -amend [ -m message ]
          
    Pousse les changements commits dans le repo distant::
       
