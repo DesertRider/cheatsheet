@@ -78,7 +78,7 @@ Commandes principales
 
    Lister les éléments de la configuration en fonction::
    
-      git config --list
+      git config [-l | --list]
       
 :Initialisation:
    
@@ -117,7 +117,7 @@ Commandes principales
          
    Affiche les changements en attente d'un commit::
       
-      git status
+      git status [-s | --short]
       
    Pousse les changements dans le repo local::
       
