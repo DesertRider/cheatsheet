@@ -59,6 +59,10 @@ Commandes principales
    Ignore les problèmes de certificats::
       
       git config --global http.sslVerify false
+      
+   Configurer l'éditeur de texte à utiliser::
+   
+      git config --global core.editor vim
          
    Configure le proxy à utiliser::
       
