@@ -22,6 +22,11 @@ Traduction maison de cette page: `<https://medium.com/@talgoldfus/better-underst
 Workflow
 --------
 
+L’utilisation standard de Git se passe comme suit:
+1. vous modifiez des fichiers dans votre répertoire de travail;
+2. vous indexez les fichiers modifiés, ce qui ajoute des instantanés de ces fichiers dans la zone d’index;
+3. vous validez, ce qui a pour effet de basculer les instantanés des fichiers de l’index dans la base de données duér pertoire Git.
+
 .. image:: https://images.osteele.com/2008/git-transport.png
       :width: 200pt
 
