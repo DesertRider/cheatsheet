@@ -41,6 +41,8 @@ Mêmes commandes, mais selon la ligne de temps:
 Cycle de vie des états des fichiers
 -----------------------------------
 
+.. image:: Git-states_of_file.png
+      :width: 200pt
 
 Commandes principales
 ---------------------
