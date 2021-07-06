@@ -28,6 +28,8 @@ L’utilisation standard de Git se passe comme suit:
 #. vous indexez les fichiers modifiés, ce qui ajoute des instantanés de ces fichiers dans la zone d’index;
 #. vous validez, ce qui a pour effet de basculer les instantanés des fichiers de l’index dans la base de données du répertoire Git.
 
+Si un remote repository est utilisé, il y aurait une étape préalable (initialiser le dépôt local avec les données du dépôt distant) et une étape finale (synchroniser les changements avec le dépôt distant).
+
 .. image:: https://images.osteele.com/2008/git-transport.png
       :width: 200pt
 
