@@ -41,7 +41,8 @@ Mêmes commandes, mais selon la ligne de temps:
 Cycle de vie des états des fichiers
 -----------------------------------
 
-.. image:: Git-states_of_file.png
+.. image:: ./Git-states_of_files.png
+.. image:: https://github.com/DesertRider/cheatsheet/blob/master/Git-states_of_files.png
       :width: 200pt
 
 Commandes principales
