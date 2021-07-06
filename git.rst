@@ -38,11 +38,16 @@ Mêmes commandes, mais selon la ligne de temps:
 .. image:: https://images.osteele.com/2008/git-workflow.png
       :width: 200pt
 
+Cycle de vie des états des fichiers
+-----------------------------------
+
 
 Commandes principales
 ---------------------
 
 :Configuration:
+
+   La configuration peut être globale (/etc/gitconfig), globale à l'utilisateur (~/.gitconfig) et dans le répertoire de travail (.git/config).
 
    Configurer le nom de l'utilisateur::
      
@@ -71,8 +76,7 @@ Commandes principales
 
    Lister les éléments de la configuration en fonction::
    
-      git config -l
-      
+      git config --list
       
 :Initialisation:
    
