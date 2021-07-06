@@ -4,6 +4,8 @@ Git
 
 Votre dépôt (*repository*) consiste de 3 structures arborescentes maintenues et monitorées par git. Le premier est votre répertoire de travail (*working directory*) et contient les fichiers sur lesquels vous travaillez. Le second est l'**Index** qui agit comme une aire de transition et finalement la tête (**HEAD**) qui pointe le dernier commit qui a été fait.
 
+La zone d’index est un simple fichier, généralement situé dans le répertoire Git, qui stocke les informations concernant ce qui fera partie du prochain instantané.
+
 .. image:: https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.
       :width: 200pt
 
