@@ -132,6 +132,10 @@ Commandes principales
       
       git add répertoire/fichier
       
+   Retirer un fichier ou répertoire du suivi de version::
+   
+      git rm --cached répertoire/fichier
+      
    Désindexer un fichier indexé (mis dans le *stage area*) (pas de changement au fichier toutefois)::
    
       git reset HEAD fichier
@@ -139,10 +143,6 @@ Commandes principales
    Retourner un fichier à l'état indexé::
    
       git checkout fichier
-      
-   Enlever un changement (pas le fichier, le changement prévu au repo)::
-   
-      git rm fichier
       
    Enlever le dernier changement qui a eu un *commit*::
    
