@@ -180,7 +180,8 @@ Commandes principales
       
    Ignorer des répertoires/fichiers::
    
-      créer un fichier .gitignore et lister les éléments à ignorer (1 par ligne, wildcard ok, commentaires avec **#**)
+      créer un fichier .gitignore et lister les éléments à ignorer (1 par ligne, wildcard ok, 
+      commentaires débutent par #)
     
 :Remote repository:
 
