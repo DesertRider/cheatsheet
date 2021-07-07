@@ -135,6 +135,7 @@ Commandes principales
    Retirer un fichier ou répertoire du suivi de version::
    
       git rm --cached répertoire/fichier
+      # si pas de --cached, git va effacer le fichier et cesser de monitorer ses changements
       
    Désindexer un fichier indexé (mis dans le *stage area*) (pas de changement au fichier toutefois)::
    
