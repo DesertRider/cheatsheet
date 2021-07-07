@@ -192,14 +192,29 @@ Commandes principales
       
 
 
-3 cas d'initialisation d'un repo
+4 cas d'initialisation d'un repo
 --------------------------------
 
-:Create a new repository:
+:Create a new from scratch repository:
 
    ::
    
+      git init myrepo
+      cd myrepo
+      touch README.md
+      git add README.md
+      git commit -m "add README"
+      git remote add origin https://site.com/directory/myrepo.git
+      git push -u origin master
+
+:Create a new repository from a remote one:
+
+   ::
+   
+      # initialize by cloning from git site
       git clone https://site.com/directory/myrepo.git
+      # or initialize an empty directory
+      git init myrepo
       cd myrepo
       touch README.md
       git add README.md
