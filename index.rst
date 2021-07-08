@@ -14,4 +14,4 @@ GitHub Flavored Markdown Specs: https://github.github.com/gfm/
 
 MarkDown CheatSheat: https://www.makeuseof.com/tag/printable-markdown-cheat-sheet/
 
-MarkDown Syntax: https://daringfireball.net/projects/markdown/syntax
+MarkDown Extended Syntax: https://www.markdownguide.org/extended-syntax
