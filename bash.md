@@ -1,39 +1,39 @@
 # Bash
 
 ## Alias, fonctions et variables d'environnement utiles
-```
-   alias dir='ls -lah'
-   alias ..='cd .."
-   alias .."cd ../..'
-   alias motd='cat /etc/motd'
-   function xdiff() { file=$(readlink -e $1) ; ssh $2 "cat $file" | diff -y -W $COLUMNS "$file" - ; }
-   export GREP_OPTIONS=--color
-   export HISTSIZE=
-   export EDITOR=vim
-   export PROMPT_COMMAND='history -a'
 
-   # Alias si pas root pour certaines commandes (*dans ~/.bashrc par exemple*)
-   if [ $UID -ne 0 ]; then
-       alias reboot='sudo reboot'
-       alias update='sudo apt-get upgrade'
-   fi
+```
+alias dir='ls -lah'
+alias ..='cd .."
+alias .."cd ../..'
+alias motd='cat /etc/motd'
+function xdiff() { file=$(readlink -e $1) ; ssh $2 "cat $file" | diff -y -W $COLUMNS "$file" - ; }
+export GREP_OPTIONS=--color
+export HISTSIZE=
+export EDITOR=vim
+export PROMPT_COMMAND='history -a'
+
+# Alias si pas root pour certaines commandes (*dans ~/.bashrc par exemple*)
+if [ $UID -ne 0 ]; then
+    alias reboot='sudo reboot'
+    alias update='sudo apt-get upgrade'
+fi
 ```
 
 **NOTE**
    On peut outrepasser un alias en débutant la commande voulue avec un "\\\"
    
-Variables Bash relatives au process::
+Variables Bash relatives au process
 
    "$$" est le current pid 
    "$!" est le pid du dernier process lancé en bg
    
    
 Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
-
-   NOW=$(date +"%F_%Hh%M")
+`NOW=$(date +"%F_%Hh%M")`
 
 ## Bash FOR loop examples
-
+```
    for VARIABLE in 1 2 3 4 5 .. N
    do
 	   command1
@@ -54,7 +54,7 @@ Utilisation d'une variable basée sur la date pour des fichiers de backups par e
 	   command2 on $OUTPUT
 	   commandN
    done
-
+```
 voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash-for-loop/)
 
 ## Script bash en mode debug
@@ -62,45 +62,45 @@ voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash
    bash -x script.sh
 
 ## Durée d'exécution dans BASH avec la variable spéciale SECONDS
-
+```
    SECONDS=0
    # do some work
    duration=$SECONDS
    echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
-
+```
 ## Durée d'exécution d'une commande
-
+```
    time du -sh /
-
+```
 ## History avec date time
-
+```
    # dans /etc/bashrc ou mieux, dans /etc/profile.d/history.sh
    cat >> /etc/profile.d/history.sh <<FIN
    HISTTIMEFORMAT=\${HISTTIMEFORMAT:-"%F %H:%M:%S "}
    FIN
-
+```
 ## Mettre en minuscule le contenu d'une variable
-
+```
    NOM=`echo $NOM | tr  '[:upper:]' '[:lower:]' `
-
+```
 ## Ignorer certaines lignes dans le history
-
+```
    echo $HISTCONTROL
    # si ignorespace alors ignore les lignes débutant par un espace
    # si ignoredups alors ignore les lignes en double (même commandes plusieurs fois en lignes)
    # si ignoreboth alors ces deux cas
-
+```
 ## Couleurs
-
+```
    # le fichier /etc/DIR_COLOR contient les codes de couleurs utilisés par la commande ls 
    # et des indications pour les codes de couleurs
    # pour mettre de la couleur dans un fichier de texte (ici rouge sur fond noir)
    echo -en "\033[31;40m" >> /etc/motd
    echo "Attention à ce que vous faites..." >> /etc/motd
    echo -en "\033[0m" >> /etc/motd
-
+```
 ## Activer pgup/pgdn search dans history
-
+```
    cat >> /etc/inputrc <<EOF
    "\e[5~": history-search-backward
    "\e[6~": history-search-forward
@@ -109,14 +109,14 @@ voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash
    # pour reloader ce fichier ou redémarrer la session
    # Pour lister les binds actuels:
    bind -p
-
+```
 ## Complétition
 
 Completition pour nom de répertoire ou de fichier::
-
+```
    complete -d cd
    complete -f vim
-
+```
 **Voir aussi /etc/bash_completion.d/**
 
 ## Redirections
