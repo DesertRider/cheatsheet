@@ -7,7 +7,7 @@
 * [ssh](ssh.rst)
 * [disques](disques.rst)
 * [mysql](mysql.rst)
-* [git](git.md)
+* [git](git.md) (MarkDown)
 
  ***
 
