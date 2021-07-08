@@ -25,8 +25,8 @@ fi
    
 ## Variables Bash relatives au process
 
-   "$$" est le current pid 
-   "$!" est le pid du dernier process lancé en bg
+   * "$$" est le current pid 
+   * "$!" est le pid du dernier process lancé en bg
    
    
 ## Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
@@ -36,88 +36,88 @@ NOW=$(date +"%F_%Hh%M")
 
 ## Bash FOR loop examples
 ```
-   for VARIABLE in 1 2 3 4 5 .. N
-   do
-	   command1
-	   command2
-	   commandN
-   done
+for VARIABLE in 1 2 3 4 5 .. N
+do
+   command1
+   command2
+   commandN
+done
 
-   for VARIABLE in file1 file2 file3
-   do
-	   command1 on $VARIABLE
-	   command2
-	   commandN
-   done
+for VARIABLE in file1 file2 file3
+do
+   command1 on $VARIABLE
+   command2
+   commandN
+done
 
-   for OUTPUT in $(Linux-Or-Unix-Command-Here)
-   do
-	   command1 on $OUTPUT
-	   command2 on $OUTPUT
-	   commandN
-   done
+for OUTPUT in $(Linux-Or-Unix-Command-Here)
+do
+   command1 on $OUTPUT
+   command2 on $OUTPUT
+   commandN
+done
 ```
 voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash-for-loop/)
 
 ## Script bash en mode debug
 
-   bash -x script.sh
+bash -x script.sh
 
 ## Durée d'exécution dans BASH avec la variable spéciale SECONDS
 ```
-   SECONDS=0
-   # do some work
-   duration=$SECONDS
-   echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
+SECONDS=0
+# do some work
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 ## Durée d'exécution d'une commande
 ```
-   time du -sh /
+time du -sh /
 ```
 ## History avec date time
 ```
-   # dans /etc/bashrc ou mieux, dans /etc/profile.d/history.sh
-   cat >> /etc/profile.d/history.sh <<FIN
-   HISTTIMEFORMAT=\${HISTTIMEFORMAT:-"%F %H:%M:%S "}
-   FIN
+# dans /etc/bashrc ou mieux, dans /etc/profile.d/history.sh
+cat >> /etc/profile.d/history.sh <<FIN
+HISTTIMEFORMAT=\${HISTTIMEFORMAT:-"%F %H:%M:%S "}
+FIN
 ```
 ## Mettre en minuscule le contenu d'une variable
 ```
-   NOM=`echo $NOM | tr  '[:upper:]' '[:lower:]' `
+NOM=`echo $NOM | tr  '[:upper:]' '[:lower:]' `
 ```
 ## Ignorer certaines lignes dans le history
 ```
-   echo $HISTCONTROL
-   # si ignorespace alors ignore les lignes débutant par un espace
-   # si ignoredups alors ignore les lignes en double (même commandes plusieurs fois en lignes)
-   # si ignoreboth alors ces deux cas
+echo $HISTCONTROL
+# si ignorespace alors ignore les lignes débutant par un espace
+# si ignoredups alors ignore les lignes en double (même commandes plusieurs fois en lignes)
+# si ignoreboth alors ces deux cas
 ```
 ## Couleurs
 ```
-   # le fichier /etc/DIR_COLOR contient les codes de couleurs utilisés par la commande ls 
-   # et des indications pour les codes de couleurs
-   # pour mettre de la couleur dans un fichier de texte (ici rouge sur fond noir)
-   echo -en "\033[31;40m" >> /etc/motd
-   echo "Attention à ce que vous faites..." >> /etc/motd
-   echo -en "\033[0m" >> /etc/motd
+# le fichier /etc/DIR_COLOR contient les codes de couleurs utilisés par la commande ls 
+# et des indications pour les codes de couleurs
+# pour mettre de la couleur dans un fichier de texte (ici rouge sur fond noir)
+echo -en "\033[31;40m" >> /etc/motd
+echo "Attention à ce que vous faites..." >> /etc/motd
+echo -en "\033[0m" >> /etc/motd
 ```
 ## Activer pgup/pgdn search dans history
 ```
-   cat >> /etc/inputrc <<EOF
-   "\e[5~": history-search-backward
-   "\e[6~": history-search-forward
-   EOF
-   bind -f /etc/inputrc
-   # pour reloader ce fichier ou redémarrer la session
-   # Pour lister les binds actuels:
-   bind -p
+cat >> /etc/inputrc <<EOF
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+EOF
+bind -f /etc/inputrc
+# pour reloader ce fichier ou redémarrer la session
+# Pour lister les binds actuels:
+bind -p
 ```
 ## Complétition
 
 Completition pour nom de répertoire ou de fichier::
 ```
-   complete -d cd
-   complete -f vim
+complete -d cd
+complete -f vim
 ```
 **Voir aussi /etc/bash_completion.d/**
 
