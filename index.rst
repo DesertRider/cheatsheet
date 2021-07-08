@@ -16,3 +16,4 @@ Contents:
    mysql
    rst
    rst_tutorial
+   git.md
