@@ -6,7 +6,7 @@ Un dépôt (*repository*) consiste de 3 structures arborescentes maintenues et m
 
 La zone d’index est un simple fichier, généralement situé dans le répertoire Git, qui stocke les informations concernant ce qui fera partie du prochain instantané.
 
-![Git schema](https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.)
+![Git schema](https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0. "Relations entre les 3 structures)
 
 Voyez Git comme un photographe qui prend une photo avec sa camera (répertoire de travail), puis la télécharge sur son ordinateur (HEAD) et lorsque prêt la publie sur son site web (**Remote Repository**). Avant de télécharger les photos dans l'ordinateur, il vérifie si il a de nouvelles photos sur sa caméra qui diffèrent de celles de son ordinateur (ce serait son **Index** / phase *staging*).
 
