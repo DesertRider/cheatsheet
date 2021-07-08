@@ -8,7 +8,7 @@ Contents:
 
    bash
    commandes
-   git
+   git1
    docker
    lvm
    ssh
