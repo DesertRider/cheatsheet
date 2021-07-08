@@ -225,3 +225,6 @@ Mêmes commandes, mais selon la ligne de temps:
     FIN
 
     git config --global commit.template ~/.gitmessage
+    
+ ***
+ 
