@@ -8,13 +8,13 @@ Contents:
 
    bash
    commandes
-   git1
    docker
    lvm
    ssh
-   git.md
    disques
    mysql
+   git.md
+   https://github.github.com/gfm/
    rst
    rst_tutorial
   
