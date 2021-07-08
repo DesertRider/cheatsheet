@@ -29,6 +29,19 @@ Traduction maison de [cette page](https://medium.com/@talgoldfus/better-understa
 | working tree | The directory associated with our repository; usually, but not necessarily, the one containing the .git subdirectory |
 | checkout | The act of switching between different states of a repository, represented by branches or commits |
 
+index
+:The *staging* area of a repository. Changes we include with the add command are *stored* here. When we create a commit, it is the index content that is included
+branch
+:An isolated line of development which spawns from a certain point of its *parent*
+commit
+:An operation which consists into integrating the changes stored in the index of a repository into the repository history
+HEAD
+:A reference to the last commit of a branch
+working tree:
+The directory associated with our repository; usually, but not necessarily, the one containing the .git subdirectory
+checkout
+:The act of switching between different states of a repository, represented by branches or commits
+
 
 ## Workflow
 
