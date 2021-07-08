@@ -60,9 +60,9 @@ done
 voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash-for-loop/)
 
 ## Script bash en mode debug
-
+```
 bash -x script.sh
-
+```
 ## Durée d'exécution dans BASH avec la variable spéciale SECONDS
 ```
 SECONDS=0
