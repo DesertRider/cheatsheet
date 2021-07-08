@@ -9,7 +9,7 @@
 * [mysql](mysql.rst)
 * [git](git.md)
 
----
+   ---
 
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
  
