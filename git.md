@@ -6,8 +6,7 @@ Un dépôt (*repository*) consiste de 3 structures arborescentes maintenues et m
 
 La zone d’index est un simple fichier, généralement situé dans le répertoire Git, qui stocke les informations concernant ce qui fera partie du prochain instantané.
 
-.. image:: https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.
-      :width: 200pt
+![Git schema](https://miro.medium.com/max/1400/0*yaI5kXRu0VTAhpD0.)
 
 Voyez Git comme un photographe qui prend une photo avec sa camera (répertoire de travail), puis la télécharge sur son ordinateur (HEAD) et lorsque prêt la publie sur son site web (**Remote Repository**). Avant de télécharger les photos dans l'ordinateur, il vérifie si il a de nouvelles photos sur sa caméra qui diffèrent de celles de son ordinateur (ce serait son **Index** / phase *staging*).
 
@@ -62,25 +61,22 @@ Si un remote repository est utilisé, il y aurait une étape préalable (initial
 
 ![Git Transport](https://images.osteele.com/2008/git-transport.png)
 
-.. image:: https://images.osteele.com/2008/git-transport.png
-      :width: 200pt
-
 Mêmes commandes, mais selon la ligne de temps:
 
-.. image:: https://images.osteele.com/2008/git-workflow.png
-      :width: 200pt
+![Git Workflow](https://images.osteele.com/2008/git-workflow.png)
+      
       
 Exemple de Workflow avec AWS CodeCommit
 ---------------------------------------
 
-.. image:: AWS-git-workflow.png
-      :width: 200pt
+![AWS Git Workflow](AWS-git-workflow.png)
+
 
 Cycle de vie des états des fichiers
 -----------------------------------
 
-.. image:: Git-states_of_files.png
-      :width: 200pt
+![Git States of files](Git-states_of_files.png)
+
 
 Commandes principales
 ---------------------
