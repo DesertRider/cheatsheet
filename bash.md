@@ -14,7 +14,7 @@
 
    Alias si pas root pour certaines commandes::
 
-   # dans ~/.bashrc par exemple
+   * # dans ~/.bashrc par exemple *
    if [ $UID -ne 0 ]; then
        alias reboot='sudo reboot'
        alias update='sudo apt-get upgrade'
