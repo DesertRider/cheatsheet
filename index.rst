@@ -11,3 +11,4 @@
    git.md
    
 GitHub Flavored Markdown Specs: https://github.github.com/gfm/
+MarkDown CheatSheat: https://www.makeuseof.com/tag/printable-markdown-cheat-sheet/
