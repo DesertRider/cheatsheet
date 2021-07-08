@@ -12,8 +12,9 @@ Contents:
    docker
    lvm
    ssh
+   git.md
    disques
    mysql
    rst
    rst_tutorial
-   git.md
+  
