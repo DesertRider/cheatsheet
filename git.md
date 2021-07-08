@@ -15,7 +15,7 @@ Il y a beaucoup plus que ça avec Git, mais cela vous donne une bonne idée du l
 
 Later when he wants to publish his work to his website or in return download the newest photos on his website that might have been uploaded by his co-worker he compares the photos that are in his computer (HEAD) and his website (Remote Repository) and only downloads or uploads the new photos . Of course that there is much more to that then this but for now it will help you understand the general idea behind the workflow.
 
-Traduction maison de cette page: `<https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997>`_
+[Traduction maison de cette page](https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997 "Better understanding Git workflow")
 
 
 ## Term Definition
@@ -34,9 +34,9 @@ Traduction maison de cette page: `<https://medium.com/@talgoldfus/better-underst
 
 L’utilisation standard de Git se passe comme suit:
 
-#. vous modifiez des fichiers dans votre répertoire de travail;
-#. vous indexez les fichiers modifiés, ce qui ajoute des instantanés de ces fichiers dans la zone d’index;
-#. vous validez, ce qui a pour effet de basculer les instantanés des fichiers de l’index dans la base de données du répertoire Git.
+1. vous modifiez des fichiers dans votre répertoire de travail;
+2. vous indexez les fichiers modifiés, ce qui ajoute des instantanés de ces fichiers dans la zone d’index;
+3. vous validez, ce qui a pour effet de basculer les instantanés des fichiers de l’index dans la base de données du répertoire Git.
 
 Si un remote repository est utilisé, il y aurait une étape préalable (initialiser le dépôt local avec les données du dépôt distant) et une étape finale 
 (synchroniser les changements avec le dépôt distant).
