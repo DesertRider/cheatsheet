@@ -183,8 +183,6 @@ Mêmes commandes, mais selon la ligne de temps:
       git push -u origin master
 
 ### Create a new repository from a remote one
-
-   ::
    
       # initialize by cloning from git site
       git clone https://site.com/directory/myrepo.git
@@ -198,8 +196,6 @@ Mêmes commandes, mais selon la ligne de temps:
 
 ### Existing folder
 
-   ::
-
       cd existing_folder
       git init
       git remote add origin https://site.com/directory/myrepo,git
@@ -208,8 +204,6 @@ Mêmes commandes, mais selon la ligne de temps:
       git push -u origin master
 
 ### Existing Git repository
-
-   ::
    
       cd existing_repo
       git remote rename origin old-origin
@@ -219,7 +213,6 @@ Mêmes commandes, mais selon la ligne de temps:
 
 
 ## Personnalisation du message lors du commit
-::
 
     cat > ~/.gitmessage <<FIN
     # |<--- Résumez le changement en 50 car. max --->|
