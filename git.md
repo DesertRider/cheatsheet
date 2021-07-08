@@ -1,5 +1,4 @@
-Git
-===
+# Git
 
 
 Un dépôt (*repository*) consiste de 3 structures arborescentes maintenues et monitorées par git. Le premier est votre répertoire de travail (*working directory*) et contient les fichiers sur lesquels vous travaillez. Le second est l'**Index** qui agit comme une aire de transition et finalement la tête (**HEAD**) qui pointe le dernier commit qui a été fait.
@@ -19,8 +18,7 @@ Later when he wants to publish his work to his website or in return download the
 Traduction maison de cette page: `<https://medium.com/@talgoldfus/better-understanding-gits-work-flow-in-order-to-properly-deal-with-merge-conflicts-part-i-760a366fc997>`_
 
 
-Term	Definition
-----------------
+## Term Definition
 
 | Terme | Définition |
 | ---: | :--- |
@@ -32,8 +30,7 @@ Term	Definition
 | checkout | The act of switching between different states of a repository, represented by branches or commits |
 
 
-Workflow
---------
+## Workflow
 
 L’utilisation standard de Git se passe comme suit:
 
@@ -51,22 +48,20 @@ Mêmes commandes, mais selon la ligne de temps:
 ![Git Workflow](https://images.osteele.com/2008/git-workflow.png)
       
       
-Exemple de Workflow avec AWS CodeCommit
----------------------------------------
+## Exemple de Workflow avec AWS CodeCommit
 
 ![AWS Git Workflow](AWS-git-workflow.png)
 
 
-Cycle de vie des états des fichiers
------------------------------------
+## Cycle de vie des états des fichiers
+
 
 ![Git States of files](Git-states_of_files.png)
 
 
-Commandes principales
----------------------
+## Commandes principales
 
-:Configuration:
+### Configuration
 
    La configuration peut être globale (/etc/gitconfig), globale à l'utilisateur (~/.gitconfig) et dans le répertoire de travail (.git/config).
 
@@ -99,7 +94,7 @@ Commandes principales
    
       git config [-l | --list]
       
-:Initialisation:
+### Initialisation
    
    Initialise un répertoire pour suivi de version::
       
@@ -110,7 +105,7 @@ Commandes principales
       git clone https://github.com/DesertRider/cheatsheet.git
       git clone ssh://user@site.com/directory/repository.git
          
-:Changements:
+### Changements
    
    Ajouter un fichier ou répertoire au suivi de version::
       
@@ -168,23 +163,17 @@ Commandes principales
       créer un fichier .gitignore et lister les éléments à ignorer (1 par ligne, wildcard ok, 
       commentaires débutent par #)
     
-:Remote repository:
+### Remote repository
 
    Afficher les informations sur les remote repositories utilisés::
    
       git remote -v
-      
-   
-      
 
 
-4 cas d'initialisation d'un repo
---------------------------------
+## Différents cas d'initialisation d'un repo
 
-:Create a new from scratch repository:
+### Create a new from scratch repository
 
-   ::
-   
       git init myrepo
       cd myrepo
       touch README.md
@@ -193,7 +182,7 @@ Commandes principales
       git remote add origin https://site.com/directory/myrepo.git
       git push -u origin master
 
-:Create a new repository from a remote one:
+### Create a new repository from a remote one
 
    ::
    
@@ -207,7 +196,7 @@ Commandes principales
       git commit -m "add README"
       git push -u origin master
 
-:Existing folder:
+### Existing folder
 
    ::
 
@@ -218,7 +207,7 @@ Commandes principales
       git commit -m "Initial commit"
       git push -u origin master
 
-:Existing Git repository:
+### Existing Git repository
 
    ::
    
@@ -229,8 +218,7 @@ Commandes principales
       git push -u origin --tags
 
 
-Personnalisation du message lors du commit
-------------------------------------------
+## Personnalisation du message lors du commit
 ::
 
     cat > ~/.gitmessage <<FIN
