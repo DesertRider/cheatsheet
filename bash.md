@@ -23,7 +23,7 @@ fi
 **NOTE**
    On peut outrepasser un alias en débutant la commande voulue avec un "\\\"
    
-Variables Bash relatives au process
+## Variables Bash relatives au process
 
    "$$" est le current pid 
    "$!" est le pid du dernier process lancé en bg
