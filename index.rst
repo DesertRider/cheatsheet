@@ -1,7 +1,7 @@
 .. toctree::
    :maxdepth: 2
 
-   bash
+   bash.md
    commandes
    docker
    lvm
