@@ -2,7 +2,7 @@
 
 ## Alias, fonctions et variables d'environnement utiles
 
-```
+```bash
 alias dir='ls -lah'
 alias ..='cd .."
 alias .."cd ../..'
@@ -30,12 +30,12 @@ fi
    
    
 ## Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
-```
+```bash
 NOW=$(date +"%F_%Hh%M")
 ```
 
 ## Bash FOR loop examples
-```
+```bash
 for VARIABLE in 1 2 3 4 5 .. N
 do
    command1
@@ -64,7 +64,7 @@ voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash
 bash -x script.sh
 ```
 ## Durée d'exécution dans BASH avec la variable spéciale SECONDS
-```
+```bash
 SECONDS=0
 # do some work
 duration=$SECONDS
