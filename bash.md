@@ -29,8 +29,10 @@ fi
    "$!" est le pid du dernier process lancé en bg
    
    
-Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
-`NOW=$(date +"%F_%Hh%M")`
+## Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
+```
+NOW=$(date +"%F_%Hh%M")
+```
 
 ## Bash FOR loop examples
 ```
