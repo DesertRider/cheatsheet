@@ -2,7 +2,7 @@
 
 ## Alias, fonctions et variables d'environnement utiles
 
-   `alias dir='ls -lah'
+  >alias dir='ls -lah'
    alias ..='cd .."
    alias .."cd ../..'
    alias motd='cat /etc/motd'
