@@ -15,6 +15,4 @@ Contents:
    mysql
    git.md
    https://github.github.com/gfm/
-   rst
-   rst_tutorial
-  
+ 
