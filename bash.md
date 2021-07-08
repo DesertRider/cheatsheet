@@ -1,8 +1,8 @@
 # Bash
 
-## Alias, fonctions et variables d'environnement utiles::
+## Alias, fonctions et variables d'environnement utiles
 
-   alias dir='ls -lah'
+   `alias dir='ls -lah'
    alias ..='cd .."
    alias .."cd ../..'
    alias motd='cat /etc/motd'
@@ -12,7 +12,7 @@
    export EDITOR=vim
    export PROMPT_COMMAND='history -a'
 
-   Alias si pas root pour certaines commandes (*dans ~/.bashrc par exemple*)
+   # Alias si pas root pour certaines commandes (*dans ~/.bashrc par exemple*)
    if [ $UID -ne 0 ]; then
        alias reboot='sudo reboot'
        alias update='sudo apt-get upgrade'
@@ -28,7 +28,7 @@ Variables Bash relatives au process::
    "$!" est le pid du dernier process lancé en bg
    
    
-Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple::
+Utilisation d'une variable basée sur la date pour des fichiers de backups par exemple:
 
    NOW=$(date +"%F_%Hh%M")
 
