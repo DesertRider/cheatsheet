@@ -60,7 +60,7 @@ done
 voir cette [référence sur les boucles bash[(https://www.cyberciti.biz/faq/bash-for-loop/)
 
 ## Script bash en mode debug
-```
+```bash
 bash -x script.sh
 ```
 ## Durée d'exécution dans BASH avec la variable spéciale SECONDS
@@ -71,29 +71,29 @@ duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 ## Durée d'exécution d'une commande
-```
+```bash
 time du -sh /
 ```
 ## History avec date time
-```
+```bash
 # dans /etc/bashrc ou mieux, dans /etc/profile.d/history.sh
 cat >> /etc/profile.d/history.sh <<FIN
 HISTTIMEFORMAT=\${HISTTIMEFORMAT:-"%F %H:%M:%S "}
 FIN
 ```
 ## Mettre en minuscule le contenu d'une variable
-```
+```bash
 NOM=`echo $NOM | tr  '[:upper:]' '[:lower:]' `
 ```
 ## Ignorer certaines lignes dans le history
-```
+```bash
 echo $HISTCONTROL
 # si ignorespace alors ignore les lignes débutant par un espace
 # si ignoredups alors ignore les lignes en double (même commandes plusieurs fois en lignes)
 # si ignoreboth alors ces deux cas
 ```
 ## Couleurs
-```
+```bash
 # le fichier /etc/DIR_COLOR contient les codes de couleurs utilisés par la commande ls 
 # et des indications pour les codes de couleurs
 # pour mettre de la couleur dans un fichier de texte (ici rouge sur fond noir)
@@ -102,7 +102,7 @@ echo "Attention à ce que vous faites..." >> /etc/motd
 echo -en "\033[0m" >> /etc/motd
 ```
 ## Activer pgup/pgdn search dans history
-```
+```bash
 cat >> /etc/inputrc <<EOF
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
@@ -115,20 +115,25 @@ bind -p
 ## Complétition
 
 Completition pour nom de répertoire ou de fichier::
-```
+```bash
 complete -d cd
 complete -f vim
 ```
 **Voir aussi /etc/bash_completion.d/**
 
 ## Redirections
-
-* ``ps 2>x.err`` redirection de stderr
-* ``ps >output.txt 2>&1`` redirection de stderr au même fichier que stdout
-* ``ps |tee both.txt`` redirection de stdout à l'écran et dans fichier
-* ``(pwd; ls) >content.txt`` redirection de plusieurs commandes
-* ``echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab`` redirection lorsque pas root
-
+```bash
+#  redirection de stderr
+ps 2>x.err
+# redirection de stderr au même fichier que stdout
+ps >output.txt 2>&1
+# redirection de stdout à l'écran et dans fichier
+ps |tee both.txt
+# redirection de plusieurs commandes
+(pwd; ls) >content.txt
+# redirection lorsque pas root
+echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab
+```
 ## Ligne de commande:
 
 * Ctrl-A moves the cursor to the beginning of the command line
