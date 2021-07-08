@@ -1,8 +1,8 @@
 # Bash
 
 ## Alias, fonctions et variables d'environnement utiles
-
-  >alias dir='ls -lah'
+```
+   alias dir='ls -lah'
    alias ..='cd .."
    alias .."cd ../..'
    alias motd='cat /etc/motd'
@@ -17,7 +17,7 @@
        alias reboot='sudo reboot'
        alias update='sudo apt-get upgrade'
    fi
-
+```
 
 **NOTE**
    On peut outrepasser un alias en débutant la commande voulue avec un "\\\"
