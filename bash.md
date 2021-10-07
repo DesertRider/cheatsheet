@@ -134,16 +134,28 @@ ps |tee both.txt
 # redirection lorsque pas root
 echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab
 ```
-## Ligne de commande:
-
-* Ctrl-A moves the cursor to the beginning of the command line
-* Ctrl-E moves the cursor to the end of the command line
-* Ctrl-K shortcut deletes everything immediately after the cursor
-* Alt-B moves backward 1 word
-* Alt-F moves forward 1 word
-* Alt-D shortcut deletes the word next to the cursor
-* Alt-T swap 2 words
-* Alt-. print last argument from previous command
-* Ctrl-Y undo a deletion  (yank)
+## Command Editing Shortcuts:
+Command Editing Shortcuts
+* Ctrl + a – go to the start of the command line
+* Ctrl + e – go to the end of the command line
+* Ctrl + k – delete from cursor to the end of the command line
+* Ctrl + u – delete from cursor to the start of the command line
+* Ctrl + w – delete from cursor to start of word (i.e. delete backwards one word)
+* Ctrl + y – paste word or text that was cut using one of the deletion shortcuts (such as the one above) after the cursor
+* Ctrl + xx – move between start of command line and current cursor position (and back again)
 * Ctrl-x Ctrl-e copie la ligne actuelle et ouvre l'éditeur $EDITOR pour ensuite l'exécuter
 
+* Alt + b – move backward one word (or go to start of word the cursor is currently on)
+* Alt + f – move forward one word (or go to end of word the cursor is currently on)
+* Alt + d – delete to end of word starting at cursor (whole word if cursor is at the beginning of word)
+* Alt + c – capitalize to end of word starting at cursor (whole word if cursor is at the beginning of word)
+* Alt + u – make uppercase from cursor to end of word
+* Alt + l – make lowercase from cursor to end of word
+* Alt + t – swap current word with previous
+* Alt-. print last argument from previous command
+
+* Ctrl + f – move forward one character
+* Ctrl + b – move backward one character
+* Ctrl + d – delete character under the cursor
+* Ctrl + h – delete character before the cursor
+* Ctrl + t – swap character under cursor with the previous one
