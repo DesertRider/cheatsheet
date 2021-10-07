@@ -152,7 +152,7 @@ Command Editing Shortcuts
 * Alt + u – make uppercase from cursor to end of word
 * Alt + l – make lowercase from cursor to end of word
 * Alt + t – swap current word with previous
-* Alt-. print last argument from previous command
+* Alt-. print last argument from previous command (note: !$ sur la ligne de commande fait la même chose)
 
 * Ctrl + f – move forward one character
 * Ctrl + b – move backward one character
