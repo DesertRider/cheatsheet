@@ -134,8 +134,8 @@ ps |tee both.txt
 # redirection lorsque pas root
 echo "/dev/sdb1  /data   ext4   defaults,rw   0  0" | sudo tee -a /etc/fstab
 ```
-## Command Editing Shortcuts:
-Command Editing Shortcuts
+## Command Editing Shortcuts
+
 * Ctrl + a – go to the start of the command line
 * Ctrl + e – go to the end of the command line
 * Ctrl + k – delete from cursor to the end of the command line
