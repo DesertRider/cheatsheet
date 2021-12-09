@@ -294,3 +294,11 @@ Clean du cache::
    apt-get clean all
 
 
+
+commandes réseau
+----------------
+
+Remplacement de nslookup::
+
+   host doubleclick.net 192.168.2.1
+   
