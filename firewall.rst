@@ -7,6 +7,10 @@ UFW
 Activer le firewall::
 
    ufw enable
+   
+Désactiver le firewall::
+
+   ufw disable
 
 Statut du firewall::
 
@@ -15,6 +19,10 @@ Statut du firewall::
 Lister les filtres ajoutés::
 
    ufw show added
+
+
+Permettre des accès
+~~~~~~~~~~~~~~~~~~~
 
 Permettre un port sur protocole::
 
@@ -34,6 +42,9 @@ Permet l'accès à un port pour une adresse IP::
    ufw allow from TARGET to DESTINATION port PORTNUMBER [proto PROTOCOL]
    ufw allow from 192.168.2.100 to any port 22 proto tcp
 
+Bloquer (refuser) des accès
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Refuser l'accès à un port::
 
    ufw deny POPRT[/PROTOCOLE]
@@ -52,10 +63,27 @@ Refuser l'accès à un port spécifique depuis une adresse IP::
    ufw deny from IPADDRESS to PROTOCOL port PORTNUMBER
    ufw deny from 192.168.2.99 to any port 80
 
-Limiter les connexions à un port::
+Limiter les connexions à un port
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you limit a connection, UFW will not allow any more than six connections within the last 30 seconds. The firewall will block any additional connections.
+::
 
    ufw limit PORT[/PROTOCOL]
    ufw limit 22
+
+Retirer des règles
+~~~~~~~~~~~~~~~~~~
+
+Retirer une règle::
+
+   ufw delete RULE
+   ufw delete limit 22/tcp
+   
+Retirer une règle d'après son numéro de règle::
+
+    ufw status numbered
+    ufw delete RULENUMBER
 
 FIREWALL-CMD
 ------------
