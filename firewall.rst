@@ -4,6 +4,9 @@ Commandes de firewall du serveur
 UFW
 ---
 
+Commandes générales
+~~~~~~~~~~~~~~~~~~~
+
 Activer le firewall::
 
    ufw enable
@@ -87,3 +90,39 @@ Retirer une règle d'après son numéro de règle::
 
 FIREWALL-CMD
 ------------
+
+Commandes générales
+~~~~~~~~~~~~~~~~~~~
+
+Activer firewalld::
+
+   systemctl enable firewalld
+   
+Redémarrer firewalld::
+
+   systemctl restart firewalld
+   
+Lister les services et ports filtrés::
+
+   firewall-cmd --list-services
+   firewall-cmd --list-ports
+   
+Zones
+~~~~~
+
+Lister et voir la zone active::
+
+   firewall-cmd --list-all-zones
+   firewall-cmd --get-default-zone
+   
+   
+Ajout de règles
+~~~~~~~~~~~~~~~
+
+Ajout d'une règle pas permanente (mise en place immédiate)::
+
+   firewall-cmd --add-port=[YOUR PORT]/tcp
+   
+Ajout d'une règle permanente (activé à la réactivation de firewalld)::
+
+   firewall-cmd --permanent --add-port=[YOUR PORT]/tcp
