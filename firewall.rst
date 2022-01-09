@@ -1,5 +1,5 @@
-Commandes reliées au firewall du serveur
-========================================
+Commandes de firewall du serveur
+================================
 
 UFW
 ---
@@ -29,14 +29,12 @@ Permet l'accès complet à partir d'une adresse IP::
 
    ufw allow from 192.168.2.100
 
-Permet l'accès à un port pour une adresse IP
-::
+Permet l'accès à un port pour une adresse IP::
 
    ufw allow from TARGET to DESTINATION port PORTNUMBER [proto PROTOCOL]
    ufw allow from 192.168.2.100 to any port 22 proto tcp
 
-Refuser l'accès à un port
-::
+Refuser l'accès à un port::
 
    ufw deny POPRT[/PROTOCOLE]
    ufw deny 3306/udp
@@ -45,18 +43,16 @@ Refuser un service::
 
    ufw deny ftp
 
-Refuser l'accès depuis une adresse IP:
+Refuser l'accès depuis une adresse IP::
 
    ufw deny from 192.168.2.99
 
-Refuser l'accès à un port spécifique depuis une adresse IP
-::
+Refuser l'accès à un port spécifique depuis une adresse IP::
 
    ufw deny from IPADDRESS to PROTOCOL port PORTNUMBER
    ufw deny from 192.168.2.99 to any port 80
 
-Limiter les connexions à un port
-::
+Limiter les connexions à un port::
 
    ufw limit PORT[/PROTOCOL]
    ufw limit 22
