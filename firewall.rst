@@ -35,6 +35,10 @@ Permettre un port sur protocole::
 Permettre un service (utilise /etc/services)::
 
    ufw allow ssh
+   
+On peut commenter la règle que l'on ajoute::
+
+   ufw allow 4443/tcp comment "NextCloud Administration"
 
 Permet l'accès complet à partir d'une adresse IP::
 
