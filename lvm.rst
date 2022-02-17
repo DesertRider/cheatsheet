@@ -51,19 +51,19 @@ Agrandir le disque virtuel, puis rescan du disque::
    
 Créer partition primaire de type 8e (ex: sdf)::
 
-   fdisk /dev/sdf
+   fdisk /dev/sdb
    partprobe
 
 Créer le volume physique::
 
    pvs
-   pvcreate /dev/sdf1
+   pvcreate /dev/sdb2
    pvs
 
 Ajouter le nouveau LVM Physical Volume au Volume Group::
 
    vgs
-   vgextend reload-data /dev/sdf1
+   vgextend volgrp_02 /dev/sdb2
    vgs
 
 Expansion du Logical Volume à 100% de l'espace free::
@@ -71,7 +71,7 @@ Expansion du Logical Volume à 100% de l'espace free::
    lvs
    lvdisplay
    # noter le path du volume logique à étendre: /dev/... (ligne LV Path)
-   lvextend -l +100%FREE /dev/reload-data/lvdata
+   lvextend -l +100%FREE /dev/volgrp_02/lv_var
    lvs
 
 Resize du file system EXT3 du volume linux::
@@ -80,7 +80,7 @@ Resize du file system EXT3 du volume linux::
    cat /etc/fstab
    # si ext3 ou ext4:
    df -h
-   resize2fs -p /dev/reload-data/lvdata
+   resize2fs -p /dev/volgrp_02/lv_var
    df -h
    # ou si XFS:
    xfs_growfs /var
