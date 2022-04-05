@@ -250,8 +250,9 @@ yum list les packages et repository d'où il provient::
 voir les script du package ou fichier::
 
    rpm -q --scripts httpd
+   repoquery --list httpd
    rpm -qp --scripts filename.rpm
-
+   
 apt-get, apt-cache, etc (Debian)
 --------------------------------
 
