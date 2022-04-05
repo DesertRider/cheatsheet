@@ -247,11 +247,14 @@ yum list les packages et repository d'où il provient::
 
    yum list installed *openjdk*
 
-voir les script du package ou fichier::
+voir les scripts du package ou fichier installé::
 
    rpm -q --scripts httpd
-   repoquery --list httpd
    rpm -qp --scripts filename.rpm
+   
+voir les fichiers du package (pas installé)::
+
+   repoquery --list pcre2-tools
    
 apt-get, apt-cache, etc (Debian)
 --------------------------------
