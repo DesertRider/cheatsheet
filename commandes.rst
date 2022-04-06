@@ -250,7 +250,10 @@ yum list les packages et repository d'où il provient::
 voir les scripts du package ou fichier installé::
 
    rpm -q --scripts httpd
-   rpm -qp --scripts filename.rpm
+   
+voir les fichiers du rpm téléchargé::
+
+   rpm -qlp filename.rpm
    
 voir les fichiers du package (pas installé)::
 
