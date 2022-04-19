@@ -37,7 +37,16 @@ Restore d'une BD::
 Exécution d'une requête sql directement via le command line::
 
    mysql -u root -p prod_int < demande1.sql  > resultat1.txt
+   
+Détruire un utilisateur::
 
+   drop user typo3@localhost;
+
+Lister les utilisateurs::
+
+   use mysql;
+   select user from user;
+   
 Quelques commandes SQL
 ----------------------
 
