@@ -28,6 +28,27 @@ Afficher le ssh server key fingerprint
 Redirection ssh / putty (port forwarding)
 -----------------------------------------
 
+Copie via rsync entre 2 serveurs qui ne peuvent se parler
+(un ssh-copy-id devra avoir été fait SOURCE_HOST et TARGET_HOST au préalable)
+::
+
+#!/bin/bash
+SOURCE_USER=user1
+SOURCE_HOST=hostname1
+SOURCE_PATH=path1
+
+TARGET_USER=user2
+TARGET_HOST=host2
+TARGET_PATH=path2
+
+ssh -l $TARGET_USER -A -R localhost:22000:$TARGET_HOST:22 \
+$SOURCE_USER@$SOURCE_HOST "rsync -e 'ssh -p 22000' -vuar $SOURCE_PATH \
+$TARGET_USER@localhost:$TARGET_PATH"
+
+
+Redirection ssh / putty (port forwarding)
+-----------------------------------------
+
 Exemple de tunnel ssh fait par putty: la console CUPS n'est accessible qu'à localhost sur le port 631
 alors dans Putty on ouvre une session ssh, on modifie Connection > SSH > Tunnels, dans "Source port" on indique 631, dans Destination
 on indique localhost:631
