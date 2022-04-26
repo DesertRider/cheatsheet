@@ -156,7 +156,7 @@ synchronisation entre 2 répertoires local::
    
    # avec -x reste sur le même file system (utile pour copier / mais pas /var si sur un 2e disque)
    # avec --dry-run, affichage de ce qui serait fait seulement, pas d'action
-   rsync -avx --dry-run -delete / /mnt/new
+   rsync -avx --dry-run --delete / /mnt/new
 
 rsync entre 2 serveurs::
 
