@@ -158,7 +158,13 @@ synchronisation entre 2 répertoires local::
    # avec --dry-run, affichage de ce qui serait fait seulement, pas d'action
    rsync -avx --dry-run --delete / /mnt/new
 
-rsync entre 2 serveurs::
+rsync entre 2 serveurs via sshfs::
+
+   mkdir /tmp/$SOURCE_HOST
+   sshfs -o default_permissions $SOURCE_USER@SOURCE_HOST:/ /tmp/$SOURCE_HOST
+   rsync -av --delete --progress /tmp/$SOURCE_HOST/$SOURCE_PATH $TARGET_USER@$TARGET_HOST:/$TARGET_PATH
+   umount /tmp/$SOURCE_HOST
+   rmdir /tmp/$SOURCE_HOST
 
    rsync -av --delete -e ssh /home1 root@qxdnfs20:/home1
 
