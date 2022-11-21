@@ -59,6 +59,10 @@ Lister les tables d'une BD::
    use my_db;
    show tables;
    
+Voir la dimension de chaques tables::
+
+   SELECT table_name AS "Table", ROUND(((data_length + index_length) / 1024 / 1024), 2) AS "Size (MB)" FROM information_schema.TABLES WHERE table_schema = "DATABASENAME" ORDER BY (data_length + index_length) DESC;
+
 Voir la structure d'une table::
 
    describe my_table;
