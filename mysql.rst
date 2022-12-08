@@ -45,7 +45,7 @@ Détruire un utilisateur::
 Lister les utilisateurs::
 
    use mysql;
-   select user from user;
+   select user,host from user;
    
 Quelques commandes SQL
 ----------------------
