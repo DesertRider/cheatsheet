@@ -47,6 +47,10 @@ Lister les utilisateurs::
    use mysql;
    select user,host from user;
    
+Montrer les droits d'un utilisateur::
+
+   show grants for matomo;
+   
 Quelques commandes SQL
 ----------------------
 
