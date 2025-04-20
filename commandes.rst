@@ -306,6 +306,10 @@ Clean du cache::
 
    apt-get clean all
 
+Retirer les packages qui ne sont plus utilisés::
+
+   apt autoremove
+
 
 
 commandes réseau
